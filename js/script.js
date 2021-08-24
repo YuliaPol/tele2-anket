@@ -10,6 +10,47 @@ jQuery(function ($) {
             inputFormat: "dd.mm.yyyy",
             placeholder: "00.00.0000"
         });
+        $('.client-logout-time').change(function(e){
+            timeChange();
+        });
+        $('.client-login-time').change(function(e){
+            timeChange();
+        });
+        function timeChange (){
+            let logoutTime = $('.client-logout-time').val();
+            let loginTime = $('.client-login-time').val();
+            let sumEl = $('.client-sum-time');
+            if(logoutTime && loginTime) {
+                let logoutSeconds = timeToSeconds(logoutTime);
+                let loginSeconds = timeToSeconds(loginTime);
+                let differnt = logoutSeconds - loginSeconds;
+                if(differnt > 0) {
+                    let sumTime = secondsToTime (differnt);
+                    sumEl.val(sumTime);
+                    $('.client-logout-time').parents('.input-fieldset').removeClass('has-error');
+                    $('.client-login-time').parents('.input-fieldset').removeClass('has-error');
+                    $('.client-login-time').parents('.time-group').find('.time-error').fadeOut(300);
+                } else {
+                    $('.client-logout-time').parents('.input-fieldset').addClass('has-error');
+                    $('.client-login-time').parents('.input-fieldset').addClass('has-error');
+                    $('.client-login-time').parents('.time-group').find('.time-error').fadeIn(300);
+                }
+            }
+        }
+        function secondsToTime(totalSeconds){
+            let hours   = Math.floor(totalSeconds / 3600)
+            let minutes = Math.floor(totalSeconds / 60) % 60
+            let seconds = totalSeconds % 60
+            return [hours,minutes,seconds]
+                .map(v => v < 10 ? "0" + v : v)
+                .filter((v,i) => v !== "00" || i > 0)
+                .join(":")
+        }
+        function timeToSeconds(time){
+            let timeSplit = time.split(':');
+            var seconds = (+timeSplit[0]) * 60 * 60 + (+timeSplit[1]) * 60 + (+timeSplit[2]);
+            return seconds;
+        }
         $('.input-fieldset input').focus(function(e){
             $(this).parents('.input-fieldset').find('.input-label').addClass('inFocus');
             $(this).parents('.input-fieldset').addClass('focusActive');
