@@ -53,6 +53,7 @@ jQuery(function ($) {
         });
         //input with calendar
         $('.date-input').datepicker({
+            // format: "HH:ii:SS",
             language: 'ru-RU',
             autoClose: true,
             autoHide: true,
