@@ -1,10 +1,15 @@
 jQuery(function ($) {
     $(document).ready(function () {
-        // $('.time-input').inputmask({
-        //     alias: "datetime",
-        //     inputFormat: "HH:MM",
-        //     placeholder: "00:00"
-        // });
+        $('.time-input').inputmask({
+            alias: "datetime",
+            inputFormat: "HH:MM:ss",
+            placeholder: "00:00:00"
+        });
+        $('.date-input').inputmask({
+            alias: "datetime",
+            inputFormat: "dd.mm.yyyy",
+            placeholder: "00.00.0000"
+        });
         $('.input-fieldset input').focus(function(e){
             $(this).parents('.input-fieldset').find('.input-label').addClass('inFocus');
             $(this).parents('.input-fieldset').addClass('focusActive');
