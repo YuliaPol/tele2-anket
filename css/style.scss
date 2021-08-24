@@ -424,6 +424,8 @@ table {
             }
             .field-time {
                 position: relative;
+                width: auto;
+                display: inline-block;
                 input[type=text] {
                     padding-right: 35px;
                 }
@@ -595,10 +597,11 @@ table {
         border: 0.5px solid #C4C4C4;
         border-radius: 50%;
         margin-right: 5px;
-        transition: background 0.3s ease-in;
+        transition: all 0.3s ease-in;
         cursor: pointer;
         &.active {
-            background: #C4C4C4;
+            background: $borderFocus;
+            border-color: $borderFocus;
         }
     }
     .text {

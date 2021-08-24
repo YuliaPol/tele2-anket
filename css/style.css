@@ -558,6 +558,8 @@ table {
 
 .page-container .questions-container .question-block .field-time {
   position: relative;
+  width: auto;
+  display: inline-block;
 }
 
 .page-container .questions-container .question-block .field-time input[type=text] {
@@ -783,14 +785,15 @@ table {
   border: 0.5px solid #C4C4C4;
   border-radius: 50%;
   margin-right: 5px;
-  -webkit-transition: background 0.3s ease-in;
-  -o-transition: background 0.3s ease-in;
-  transition: background 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   cursor: pointer;
 }
 
 .customselect-wrapper .checked.active {
-  background: #C4C4C4;
+  background: #0086ff;
+  border-color: #0086ff;
 }
 
 .customselect-wrapper .text {

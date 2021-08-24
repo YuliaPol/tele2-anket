@@ -523,7 +523,40 @@
                 <div class="questions-group">
                     <div class="questions-group-name">
                         <span>
-                            2. KPI. Сотрудник решил запрос клиента
+                            2.1.KPI. Сотрудник решил запрос клиента
+                        </span>
+                    </div>
+                    <div class="question-block">
+                        <div class="question">
+                            2.1. Сотрудник решил запрос клиента
+                        </div>
+                        <div class="answer answer-radio flex-25 show-hidden">
+                            <div class="radio-item">
+                                <input type="radio" name="q-31" id="q-31-1" data-reqired="reqired" value="Да">
+                                <label for="q-31-1">Да</label>
+                            </div>
+                            <div class="radio-item">
+                                <input data-hidden=".hidden-31-not" type="radio" name="q-31" id="q-31-2"
+                                    data-reqired="reqired" value="Нет">
+                                <label for="q-31-2">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden-question hidden-31-not">
+                        <div class="question-block">
+                            <div class="question">
+                                По какой причине выставлена оценка Нет
+                            </div>
+                            <div class="answer">
+                                <textarea name="q-32" rows="1" data-reqired="reqired"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="questions-group">
+                    <div class="questions-group-name">
+                        <span>
+                            2.2.KPI. Сотрудник решил запрос клиента
                         </span>
                     </div>
                     <div class="questions-group-description">
@@ -544,7 +577,7 @@
                                 предлагает подобрать тариф и договаривается о повторном визите.
                             </li>
                         </ol>
-
+                
                         <p class="text-bold">Критерий считается не выполненным (Нет):</p>
                         <ol>
                             <li>
@@ -567,27 +600,27 @@
                     </div>
                     <div class="question-block">
                         <div class="question">
-                            2.1. Сотрудник решил запрос клиента
+                            2.2. Сотрудник соблюдает обязательные условия выполнения запроса клиента
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input type="radio" name="q-31" id="q-31-1" data-reqired="reqired" value="Да">
-                                <label for="q-31-1">Да</label>
+                                <input type="radio" name="q-33" id="q-33-1" data-reqired="reqired" value="Да">
+                                <label for="q-33-1">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-31-not" type="radio" name="q-31" id="q-31-2"
+                                <input data-hidden=".hidden-33-not" type="radio" name="q-33" id="q-33-2"
                                     data-reqired="reqired" value="Нет">
-                                <label for="q-31-2">Нет</label>
+                                <label for="q-33-2">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-31-not">
+                    <div class="hidden-question hidden-33-not">
                         <div class="question-block">
                             <div class="question">
-                                2.2. Какие именно условия не соблюдал сотрудник 
+                                Какие именно условия не соблюдал сотрудник 
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-32" data-reqired="reqired">
+                                <select class="customselect" name="q-34" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option
                                         value="Сотрудник нарушил условия идентификации абонента, указанные в процедуре">
@@ -627,18 +660,21 @@
                         </div>
                         <div class="question-block">
                             <div class="question">
-                                2.3. Кратко опишите нарушение
+                                Кратко опишите нарушение
                             </div>
                             <div class="answer">
-                                <textarea name="q-33" rows="1" data-reqired="reqired"></textarea>
+                                <textarea name="q-35" rows="1" data-reqired="reqired"></textarea>
                             </div>
                         </div>
                         <div class="question-block">
                             <div class="question">
-                                2.4. Укажите время нарушения
+                                Укажите время нарушения
                             </div>
                             <div class="answer">
-                                <input type="text" name="q-34" data-reqired="reqired">
+                                <div class="field-time">
+                                    <input class="time-input" type="text" name="q-36" data-reqired="reqired">
+                                    <div class="clock"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -701,28 +737,28 @@
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input data-hidden=".hidden-35-na" type="radio" name="q-35" id="q-35-1" value="N/A"
+                                <input data-hidden=".hidden-37-na" type="radio" name="q-37" id="q-37-1" value="N/A"
                                     data-reqired="reqired">
-                                <label for="q-35-1">N/A</label>
+                                <label for="q-37-1">N/A</label>
                             </div>
                             <div class="radio-item">
-                                <input type="radio" name="q-35" id="q-35-2" data-reqired="reqired" value="Да">
-                                <label for="q-35-2">Да</label>
+                                <input type="radio" name="q-37" id="q-37-2" data-reqired="reqired" value="Да">
+                                <label for="q-37-2">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-35-not" type="radio" name="q-35" id="q-35-3" value="Нет"
+                                <input data-hidden=".hidden-37-not" type="radio" name="q-37" id="q-37-3" value="Нет"
                                     data-reqired="reqired">
-                                <label for="q-35-3">Нет</label>
+                                <label for="q-37-3">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-35-not">
+                    <div class="hidden-question hidden-37-not">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине выставлена оценка Нет
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-36" data-reqired="reqired">
+                                <select class="customselect" name="q-38" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option value="Сотрудник не выявил наличие номеров другого оператора">
                                         Сотрудник не выявил наличие номеров другого оператора
@@ -734,13 +770,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-35-na">
+                    <div class="hidden-question hidden-37-na">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине выставлена оценка N|A 
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-37" data-reqired="reqired">
+                                <select class="customselect" name="q-39" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option value="Клиент сообщил, что является приезжим">
                                         Клиент сообщил, что является приезжим
@@ -826,28 +862,28 @@
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input data-hidden=".hidden-38-na" type="radio" name="q-38" id="q-38-1" value="N/A"
+                                <input data-hidden=".hidden-40-na" type="radio" name="q-40" id="q-40-1" value="N/A"
                                     data-reqired="reqired">
-                                <label for="q-38-1">N/A</label>
+                                <label for="q-40-1">N/A</label>
                             </div>
                             <div class="radio-item">
-                                <input type="radio" name="q-38" id="q-38-2" data-reqired="reqired" value="Да">
-                                <label for="q-38-2">Да</label>
+                                <input type="radio" name="q-40" id="q-40-2" data-reqired="reqired" value="Да">
+                                <label for="q-40-2">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-38-not" type="radio" name="q-38" id="q-38-3" value="Нет"
+                                <input data-hidden=".hidden-40-not" type="radio" name="q-40" id="q-40-3" value="Нет"
                                     data-reqired="reqired">
-                                <label for="q-38-3">Нет</label>
+                                <label for="q-40-3">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-38-not">
+                    <div class="hidden-question hidden-40-not">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине не завершен MNP
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-39" data-reqired="reqired">
+                                <select class="customselect" name="q-41" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option value="Сотрудник не выяснил наличие сим-карт другого оператора   ">
                                         Сотрудник не выяснил наличие сим-карт другого оператора
@@ -862,13 +898,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-38-na">
+                    <div class="hidden-question hidden-40-na">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине выставлена оценка N/A
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-40" data-reqired="reqired">
+                                <select class="customselect" name="q-42" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option value="Сотрудник выяснил, что клиент является приезжим">
                                         Сотрудник выяснил, что клиент является приезжим
@@ -932,23 +968,23 @@
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input type="radio" name="q-41" id="q-41-1" value="Да" data-reqired="reqired">
-                                <label for="q-41-1">Да</label>
+                                <input type="radio" name="q-43" id="q-43-1" value="Да" data-reqired="reqired">
+                                <label for="q-43-1">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-41-not" type="radio" name="q-41" id="q-41-2" value="Нет"
+                                <input data-hidden=".hidden-43-not" type="radio" name="q-43" id="q-43-2" value="Нет"
                                     data-reqired="reqired">
-                                <label for="q-41-2">Нет</label>
+                                <label for="q-43-2">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-41-not">
+                    <div class="hidden-question hidden-43-not">
                         <div class="question-block">
                             <div class="question">
                                 В чем именно выражалось не качественное предложение 
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-42" data-reqired="reqired">
+                                <select class="customselect" name="q-44" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option
                                         value="Сотрудник не озвучил, где скачать приложение (при наличие тех.проблем)">
@@ -1012,28 +1048,28 @@
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input data-hidden=".hidden-43-na" type="radio" name="q-43" id="q-43-1" value="N/A"
+                                <input data-hidden=".hidden-45-na" type="radio" name="q-45" id="q-45-1" value="N/A"
                                     data-reqired="reqired">
-                                <label for="q-43-1">N/A</label>
+                                <label for="q-45-1">N/A</label>
                             </div>
                             <div class="radio-item">
-                                <input type="radio" name="q-43" id="q-43-2" data-reqired="reqired" value="Да">
-                                <label for="q-43-2">Да</label>
+                                <input type="radio" name="q-45" id="q-45-2" data-reqired="reqired" value="Да">
+                                <label for="q-45-2">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-43-not" type="radio" name="q-43" id="q-43-3" value="Нет"
+                                <input data-hidden=".hidden-45-not" type="radio" name="q-45" id="q-45-3" value="Нет"
                                     data-reqired="reqired">
-                                <label for="q-43-3">Нет</label>
+                                <label for="q-45-3">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-43-na">
+                    <div class="hidden-question hidden-45-na">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине выставлена оценка N/A
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-44" multiple data-reqired="reqired">
+                                <select class="customselect" name="q-46" multiple data-reqired="reqired">
                                     <!-- <option value="" disabled selected>Выбрать ответ</option> -->
                                     <option
                                         value="У клиента нет с собой подходящего устройства для установки приложения">
@@ -1053,13 +1089,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-43-not">
+                    <div class="hidden-question hidden-45-not">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине сотрудник не установил приложение
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-45" multiple data-reqired="reqired">
+                                <select class="customselect" name="q-47" multiple data-reqired="reqired">
                                     <!-- <option value="" disabled selected>Выбрать ответ</option> -->
                                     <option value="Сотрудник не информирует о приложении Мой Tele2">
                                         Сотрудник не информирует о приложении Мой Tele2
@@ -1092,122 +1128,162 @@
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input data-hidden=".hidden-46-na" type="radio" name="q-46" id="q-46-1" value="N/A"
+                                <input data-hidden=".hidden-48-na" type="radio" name="q-48" id="q-48-1" value="N/A"
                                     data-reqired="reqired">
-                                <label for="q-46-1">N/A</label>
+                                <label for="q-48-1">N/A</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-46-yes" type="radio" name="q-46" id="q-46-2" value="Да"
+                                <input data-hidden=".hidden-48-yes" type="radio" name="q-48" id="q-48-2" value="Да"
                                     data-reqired="reqired">
-                                <label for="q-46-2">Да</label>
+                                <label for="q-48-2">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-46-not" type="radio" name="q-46" id="q-46-3" value="Нет"
+                                <input data-hidden=".hidden-48-not" type="radio" name="q-48" id="q-48-3" value="Нет"
                                     data-reqired="reqired">
-                                <label for="q-46-3">Нет</label>
+                                <label for="q-48-3">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-46-yes">
+                    <div class="hidden-question hidden-48-yes">
                         <div class="question-block">
                             <div class="question">
                                 Выберите дополнительные продукты, которые сотрудник предложил качественно 
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect select-show-hidden" name="q-47" data-reqired="reqired">
+                                <select class="customselect select-show-hidden" name="q-49" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
-                                    <option data-hidden=".hidden-47-1" value="Неоператорские сервисы">Неоператорские
+                                    <option data-hidden=".hidden-49-1" value="Неоператорские сервисы">Неоператорские
                                         сервисы</option>
-                                    <option data-hidden=".hidden-47-2" value="Оборудование 3G/4G">Оборудование 3G/4G
+                                    <option data-hidden=".hidden-49-2" value="Оборудование 3G/4G">Оборудование 3G/4G
                                     </option>
-                                    <option data-hidden=".hidden-47-3" value="Операторские сервисы">Операторские сервисы
+                                    <option data-hidden=".hidden-49-3" value="Операторские сервисы">Операторские сервисы
                                     </option>
-                                    <option data-hidden=".hidden-47-4" value="Прочее оборудование и аксессуары">Прочее
+                                    <option data-hidden=".hidden-49-4" value="Прочее оборудование и аксессуары">Прочее
                                         оборудование и аксессуары</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="question-block hidden-question hidden-47-1">
-                            <div class="question">
-                                Укажите что именно сотрудник предложил качественно 
+                        <div class="hidden-question hidden-49-1">
+                            <div class="question-block">
+                                <div class="question">
+                                    Укажите что именно сотрудник предложил качественно 
+                                </div>
+                                <div class="answer select-answer">
+                                    <select class="customselect select-show-hidden" name="q-49-1" data-reqired="reqired">
+                                        <option value="" disabled selected>Выбрать ответ</option>
+                                        <option value="Лотерея">Лотерея</option>
+                                        <option value="Антивирус">Антивирус</option>
+                                        <option value="Страховка">Страховка</option>
+                                        <option value="Наклейка стекла">Наклейка стекла</option>
+                                        <option value="Пакет «Выгодное решение от Ростелеком»">
+                                            Пакет «Выгодное решение от Ростелеком»
+                                        </option>
+                                        <option data-hidden=".hidden-49-1-other" value="Прочее">Прочее</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="answer select-answer">
-                                <select class="customselect" name="q-47-1" data-reqired="reqired">
-                                    <option value="" disabled selected>Выбрать ответ</option>
-                                    <option value="Лотерея">Лотерея</option>
-                                    <option value="Антивирус">Антивирус</option>
-                                    <option value="Страховка">Страховка</option>
-                                    <option value="Наклейка стекла">Наклейка стекла</option>
-                                    <option value="Пакет «Выгодное решение от Ростелеком»">
-                                        Пакет «Выгодное решение от Ростелеком»
-                                    </option>
-                                    <option value="Прочее">Прочее</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="question-block hidden-question hidden-47-2">
-                            <div class="question">
-                                Укажите что именно сотрудник предложил качественно 
-                            </div>
-                            <div class="answer select-answer">
-                                <select class="customselect" name="q-47-2" data-reqired="reqired">
-                                    <option value="" disabled selected>Выбрать ответ</option>
-                                    <option value="Модем">Модем</option>
-                                    <option value="Роутер">Роутер</option>
-                                    <option value="Смартфон">Смартфон</option>
-                                    <option value="Брендированный смартфон">Брендированный смартфон</option>
-                                    <option value="Прочее">Прочее</option>
-                                </select>
+                            <div class="hidden-question hidden-49-1-other">
+                                <div class="question-block">
+                                    <div class="question">
+                                        Укажите что именно сотрудник предложил качественно
+                                    </div>
+                                    <div class="answer">
+                                        <textarea name="q-49-1-other" rows="1" data-reqired="reqired"></textarea>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="question-block hidden-question hidden-47-3">
-                            <div class="question">
-                                Укажите что именно сотрудник предложил качественно 
+                        <div class="hidden-question hidden-49-2">
+                            <div class="question-block">
+                                <div class="question">
+                                    Укажите что именно сотрудник предложил качественно 
+                                </div>
+                                <div class="answer select-answer">
+                                    <select class="customselect select-show-hidden" name="q-49-2" data-reqired="reqired">
+                                        <option value="" disabled selected>Выбрать ответ</option>
+                                        <option value="Модем">Модем</option>
+                                        <option value="Роутер">Роутер</option>
+                                        <option value="Смартфон">Смартфон</option>
+                                        <option value="Брендированный смартфон">Брендированный смартфон</option>
+                                        <option data-hidden=".hidden-49-2-other"  value="Прочее">Прочее</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="answer select-answer">
-                                <select class="customselect" name="q-47-3" data-reqired="reqired">
-                                    <option value="" disabled selected>Выбрать ответ</option>
-                                    <option value="Смена тарифа">Смена тарифа</option>
-                                    <option value="Интернет-опции">Интернет-опции</option>
-                                    <option value="Контент (Tele2 TV Zvooq)">Контент (Tele2 TV Zvooq)</option>
-                                    <option value="Скидки на звонки">Скидки на звонки</option>
-                                    <option value="MNP">MNP</option>
-                                    <option value="Прочее">Прочее</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="question-block hidden-question hidden-47-4">
-                            <div class="question">
-                                Укажите что именно сотрудник предложил качественно 
-                            </div>
-                            <div class="answer select-answer">
-                                <select class="customselect" name="q-47-4" data-reqired="reqired">
-                                    <option value="" disabled selected>Выбрать ответ</option>
-                                    <option value="Стекло">Стекло</option>
-                                    <option value="Чехол">Чехол</option>
-                                    <option value="Наушники">Наушники</option>
-                                    <option value="Power Bank">Power Bank</option>
-                                    <option value="Зарядное устройство">Зарядное устройство</option>
-                                    <option value="Прочее">Прочее</option>
-                                </select>
+                            <div class="hidden-question hidden-49-2-other">
+                                <div class="question-block">
+                                    <div class="question">
+                                        Укажите что именно сотрудник предложил качественно
+                                    </div>
+                                    <div class="answer">
+                                        <textarea name="q-49-2-other" rows="1" data-reqired="reqired"></textarea>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="question-block">
-                            <div class="question">
-                                Укажите что именно сотрудник предложил качественно
+                        <div class="hidden-question hidden-49-3">
+                            <div class="question-block">
+                                <div class="question">
+                                    Укажите что именно сотрудник предложил качественно 
+                                </div>
+                                <div class="answer select-answer">
+                                    <select class="customselect select-show-hidden" name="q-49-3" data-reqired="reqired">
+                                        <option value="" disabled selected>Выбрать ответ</option>
+                                        <option value="Смена тарифа">Смена тарифа</option>
+                                        <option value="Интернет-опции">Интернет-опции</option>
+                                        <option value="Контент (Tele2 TV Zvooq)">Контент (Tele2 TV Zvooq)</option>
+                                        <option value="Скидки на звонки">Скидки на звонки</option>
+                                        <option value="MNP">MNP</option>
+                                        <option data-hidden=".hidden-49-3-other"  value="Прочее">Прочее</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="answer">
-                                <textarea name="q-48" rows="1" data-reqired="reqired"></textarea>
+                            <div class="hidden-question hidden-49-3-other">
+                                <div class="question-block">
+                                    <div class="question">
+                                        Укажите что именно сотрудник предложил качественно
+                                    </div>
+                                    <div class="answer">
+                                        <textarea name="q-49-3-other" rows="1" data-reqired="reqired"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-question hidden-49-4">
+                            <div class="question-block">
+                                <div class="question">
+                                    Укажите что именно сотрудник предложил качественно 
+                                </div>
+                                <div class="answer select-answer">
+                                    <select class="customselect select-show-hidden" name="q-49-4" data-reqired="reqired">
+                                        <option value="" disabled selected>Выбрать ответ</option>
+                                        <option value="Стекло">Стекло</option>
+                                        <option value="Чехол">Чехол</option>
+                                        <option value="Наушники">Наушники</option>
+                                        <option value="Power Bank">Power Bank</option>
+                                        <option value="Зарядное устройство">Зарядное устройство</option>
+                                        <option data-hidden=".hidden-49-4-other" value="Прочее">Прочее</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="hidden-question hidden-49-4-other">
+                                <div class="question-block">
+                                    <div class="question">
+                                        Укажите что именно сотрудник предложил качественно
+                                    </div>
+                                    <div class="answer">
+                                        <textarea name="q-49-4-other" rows="1" data-reqired="reqired"></textarea>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-46-not">
+                    <div class="hidden-question hidden-48-not">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине выставлена оценка "Нет"
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-49" data-reqired="reqired">
+                                <select class="customselect" name="q-50" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option value="Сотрудник ничего не говорит о дополнительных продуктах">
                                         Сотрудник ничего не говорит о дополнительных продуктах
@@ -1219,13 +1295,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-46-na">
+                    <div class="hidden-question hidden-48-na">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине выставлена оценка N/A
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-50" data-reqired="reqired">
+                                <select class="customselect" name="q-51" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option value="Сотрудник ничего не говорит о дополнительных продуктах">
                                         Сотрудник ничего не говорит о дополнительных продуктах
@@ -1267,116 +1343,156 @@
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input data-hidden=".hidden-51-na" type="radio" name="q-51" id="q-51-1" value="N/A"
+                                <input data-hidden=".hidden-52-na" type="radio" name="q-52" id="q-52-1" value="N/A"
                                     data-reqired="reqired">
-                                <label for="q-51-1">N/A</label>
+                                <label for="q-52-1">N/A</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-51-yes" type="radio" name="q-51" id="q-51-2" value="Да"
+                                <input data-hidden=".hidden-52-yes" type="radio" name="q-52" id="q-52-2" value="Да"
                                     data-reqired="reqired">
-                                <label for="q-51-2">Да</label>
+                                <label for="q-52-2">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input data-hidden=".hidden-51-not" type="radio" name="q-51" id="q-51-3" value="Нет"
+                                <input data-hidden=".hidden-52-not" type="radio" name="q-52" id="q-52-3" value="Нет"
                                     data-reqired="reqired">
-                                <label for="q-51-3">Нет</label>
+                                <label for="q-52-3">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-51-yes">
+                    <div class="hidden-question hidden-52-yes">
                         <div class="question-block">
                             <div class="question">
                                 Выберите дополнительные продукты, которые приобрёл клиент
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect select-show-hidden" name="q-52" data-reqired="reqired">
+                                <select class="customselect select-show-hidden" name="q-53" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
-                                    <option data-hidden=".hidden-52-1" value="Неоператорские сервисы">Неоператорские
+                                    <option data-hidden=".hidden-53-1" value="Неоператорские сервисы">Неоператорские
                                         сервисы</option>
-                                    <option data-hidden=".hidden-52-2" value="Оборудование 3G/4G">Оборудование 3G/4G
+                                    <option data-hidden=".hidden-53-2" value="Оборудование 3G/4G">Оборудование 3G/4G
                                     </option>
-                                    <option data-hidden=".hidden-52-3" value="Операторские сервисы">Операторские сервисы
+                                    <option data-hidden=".hidden-53-3" value="Операторские сервисы">Операторские сервисы
                                     </option>
-                                    <option data-hidden=".hidden-52-4" value="Прочее оборудование и аксессуары">Прочее
+                                    <option data-hidden=".hidden-53-4" value="Прочее оборудование и аксессуары">Прочее
                                         оборудование и аксессуары</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="question-block hidden-question hidden-52-1">
-                            <div class="question">
-                                Укажите что именно приобрел клиент
+                        <div class="hidden-question hidden-53-1">
+                            <div class="question-block">
+                                <div class="question">
+                                    Укажите что именно приобрел клиент
+                                </div>
+                                <div class="answer select-answer">
+                                    <select class="customselect select-show-hidden" name="q-53-1" data-reqired="reqired">
+                                        <option value="" disabled selected>Выбрать ответ</option>
+                                        <option value="Лотерея">Лотерея</option>
+                                        <option value="Антивирус">Антивирус</option>
+                                        <option value="Страховка">Страховка</option>
+                                        <option value="Наклейка стекла">Наклейка стекла</option>
+                                        <option value="Пакет «Выгодное решение от Ростелеком»">
+                                            Пакет «Выгодное решение от Ростелеком»
+                                        </option>
+                                        <option data-hidden=".hidden-53-1-other"  value="Прочее">Прочее</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="answer select-answer">
-                                <select class="customselect" name="q-52-1" data-reqired="reqired">
-                                    <option value="" disabled selected>Выбрать ответ</option>
-                                    <option value="Лотерея">Лотерея</option>
-                                    <option value="Антивирус">Антивирус</option>
-                                    <option value="Страховка">Страховка</option>
-                                    <option value="Наклейка стекла">Наклейка стекла</option>
-                                    <option value="Пакет «Выгодное решение от Ростелеком»">
-                                        Пакет «Выгодное решение от Ростелеком»
-                                    </option>
-                                    <option value="Прочее">Прочее</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="question-block hidden-question hidden-52-2">
-                            <div class="question">
-                                Укажите что именно приобрел клиент
-                            </div>
-                            <div class="answer select-answer">
-                                <select class="customselect" name="q-52-2" data-reqired="reqired">
-                                    <option value="" disabled selected>Выбрать ответ</option>
-                                    <option value="Модем">Модем</option>
-                                    <option value="Роутер">Роутер</option>
-                                    <option value="Смартфон">Смартфон</option>
-                                    <option value="Брендированный смартфон">Брендированный смартфон</option>
-                                    <option value="Прочее">Прочее</option>
-                                </select>
+                            <div class="hidden-question hidden-53-1-other">
+                                <div class="question-block">
+                                    <div class="question">
+                                        Укажите что именно приобрел клиент
+                                    </div>
+                                    <div class="answer">
+                                        <textarea name="q-53-1-other" rows="1" data-reqired="reqired"></textarea>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="question-block hidden-question hidden-52-3">
-                            <div class="question">
-                                Укажите что именно приобрел клиент
+                        <div class="hidden-question hidden-53-2">
+                            <div class="question-block">
+                                <div class="question">
+                                    Укажите что именно приобрел клиент
+                                </div>
+                                <div class="answer select-answer">
+                                    <select class="customselect select-show-hidden" name="q-53-2" data-reqired="reqired">
+                                        <option value="" disabled selected>Выбрать ответ</option>
+                                        <option value="Модем">Модем</option>
+                                        <option value="Роутер">Роутер</option>
+                                        <option value="Смартфон">Смартфон</option>
+                                        <option value="Брендированный смартфон">Брендированный смартфон</option>
+                                        <option data-hidden=".hidden-53-2-other"  value="Прочее">Прочее</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="answer select-answer">
-                                <select class="customselect" name="q-52-3" data-reqired="reqired">
-                                    <option value="" disabled selected>Выбрать ответ</option>
-                                    <option value="Смена тарифа">Смена тарифа</option>
-                                    <option value="Интернет-опции">Интернет-опции</option>
-                                    <option value="Контент (Tele2 TV Zvooq)">Контент (Tele2 TV Zvooq)</option>
-                                    <option value="Скидки на звонки">Скидки на звонки</option>
-                                    <option value="MNP">MNP</option>
-                                    <option value="Прочее">Прочее</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="question-block hidden-question hidden-52-4">
-                            <div class="question">
-                                Укажите что именно приобрел клиент
-                            </div>
-                            <div class="answer select-answer">
-                                <select class="customselect" name="q-52-4" data-reqired="reqired">
-                                    <option value="" disabled selected>Выбрать ответ</option>
-                                    <option value="Стекло">Стекло</option>
-                                    <option value="Чехол">Чехол</option>
-                                    <option value="Наушники">Наушники</option>
-                                    <option value="Power Bank">Power Bank</option>
-                                    <option value="Зарядное устройство">Зарядное устройство</option>
-                                    <option value="Прочее">Прочее</option>
-                                </select>
+                            <div class="hidden-question hidden-53-2-other">
+                                <div class="question-block">
+                                    <div class="question">
+                                        Укажите что именно приобрел клиент
+                                    </div>
+                                    <div class="answer">
+                                        <textarea name="q-53-2-other" rows="1" data-reqired="reqired"></textarea>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="question-block">
-                            <div class="question">
-                                Укажите что именно приобрел клиент
+                        <div class="hidden-question hidden-53-3">
+                            <div class="question-block">
+                                <div class="question">
+                                    Укажите что именно приобрел клиент
+                                </div>
+                                <div class="answer select-answer">
+                                    <select class="customselect select-show-hidden" name="q-53-3" data-reqired="reqired">
+                                        <option value="" disabled selected>Выбрать ответ</option>
+                                        <option value="Смена тарифа">Смена тарифа</option>
+                                        <option value="Интернет-опции">Интернет-опции</option>
+                                        <option value="Контент (Tele2 TV Zvooq)">Контент (Tele2 TV Zvooq)</option>
+                                        <option value="Скидки на звонки">Скидки на звонки</option>
+                                        <option value="MNP">MNP</option>
+                                        <option data-hidden=".hidden-53-3-other"  value="Прочее">Прочее</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="answer">
-                                <textarea name="q-53" rows="1" data-reqired="reqired"></textarea>
+                            <div class="hidden-question hidden-53-3-other">
+                                <div class="question-block">
+                                    <div class="question">
+                                        Укажите что именно приобрел клиент
+                                    </div>
+                                    <div class="answer">
+                                        <textarea name="q-53-3-other" rows="1" data-reqired="reqired"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-question hidden-53-4">
+                            <div class="question-block">
+                                <div class="question">
+                                    Укажите что именно приобрел клиент
+                                </div>
+                                <div class="answer select-answer">
+                                    <select class="customselect select-show-hidden" name="q-53-4" data-reqired="reqired">
+                                        <option value="" disabled selected>Выбрать ответ</option>
+                                        <option value="Стекло">Стекло</option>
+                                        <option value="Чехол">Чехол</option>
+                                        <option value="Наушники">Наушники</option>
+                                        <option value="Power Bank">Power Bank</option>
+                                        <option value="Зарядное устройство">Зарядное устройство</option>
+                                        <option data-hidden=".hidden-53-4-other" value="Прочее">Прочее</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="hidden-question hidden-53-4-other">
+                                <div class="question-block">
+                                    <div class="question">
+                                        Укажите что именно приобрел клиент
+                                    </div>
+                                    <div class="answer">
+                                        <textarea name="q-53-4-other" rows="1" data-reqired="reqired"></textarea>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-51-not">
+                    <div class="hidden-question hidden-52-not">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине выставлена оценка "Нет"
@@ -1394,7 +1510,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-51-na">
+                    <div class="hidden-question hidden-52-na">
                         <div class="question-block">
                             <div class="question">
                                 По какой причине выставлена оценка N/A
