@@ -1108,7 +1108,7 @@ table {
 }
 
 .anket-info-block .label {
-  display: inline-block;
+  display: inline;
   padding-right: 5px;
 }
 
@@ -1236,6 +1236,9 @@ table {
   .page-container .flex-25 > div {
     width: 33%;
   }
+  .page-container .flex-sm-50 > div {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1252,11 +1255,24 @@ table {
 }
 
 @media screen and (max-width: 520px) {
+  .anket-info-block {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px;
+  }
+  .page-container .questions-group {
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
   .page-container .flex-33.flex-sm-100 > div {
     width: 100%;
   }
   .page-container .flex-33.flex-sm-100 > div:nth-child(1) {
     padding-right: 0px;
+  }
+  .page-container .questions-container .questions-group-description,
+  .page-container .questions-container .question-block .question-description {
+    padding: 10px;
   }
   .page-container .questions-container .question-block .input-fieldset {
     max-width: 100%;

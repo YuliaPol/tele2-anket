@@ -271,7 +271,17 @@ jQuery(function ($) {
                     if (el[i].tagName === 'INPUT') {
                         var name = el[i].getAttribute('name');
                         if (document.querySelectorAll('[name=' + name + ']:checked').length === 0) {
-                            if($(el[i]).parents('.radio-item').is(':visible')){
+                            if($(el[i]).parents('.radio-cont').length > 0){
+                                if($(el[i]).parents('.radio-cont').is(':visible')){
+                                    erroreArrayElemnts.push(el[i]);
+                                    $(el[i]).parents('.question-block').addClass('has-error');
+                                    var inputname = $(el[i]).attr('name');
+                                    $('input[name='+ inputname + ']').change(function (e) {
+                                        $(this).parents('.question-block').removeClass('has-error');
+                                    });
+                                }
+                            }
+                            else if($(el[i]).parents('.radio-item').is(':visible')){
                                 erroreArrayElemnts.push(el[i]);
                                 $(el[i]).parents('.question-block').addClass('has-error');
                                 var inputname = $(el[i]).attr('name');
