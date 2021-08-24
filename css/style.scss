@@ -383,6 +383,9 @@ table {
                 input[type=text] {
                     border: none;
                     outline: none;
+                    &::placeholder {
+                        color: #ffffff;
+                    }
                 }
                 .input-label {
                     font-size: 14px;
@@ -500,6 +503,15 @@ table {
         width: 100% !important;
         font-size: 14px;
         line-height: 18px;
+        padding-bottom: 10px;
+        color: red;
+        display: none;
+    }
+    .error {
+        width: 100% !important;
+        font-size: 14px;
+        line-height: 18px;
+        padding-top: 10px;
         padding-bottom: 10px;
         color: red;
         display: none;

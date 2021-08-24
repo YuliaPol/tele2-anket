@@ -494,6 +494,26 @@ table {
   outline: none;
 }
 
+.page-container .questions-container .question-block .input-fieldset input[type=text]::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.page-container .questions-container .question-block .input-fieldset input[type=text]::-moz-placeholder {
+  color: #ffffff;
+}
+
+.page-container .questions-container .question-block .input-fieldset input[type=text]:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.page-container .questions-container .question-block .input-fieldset input[type=text]::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.page-container .questions-container .question-block .input-fieldset input[type=text]::placeholder {
+  color: #ffffff;
+}
+
 .page-container .questions-container .question-block .input-fieldset .input-label {
   font-size: 14px;
   line-height: 14px;
@@ -660,6 +680,16 @@ table {
   width: 100% !important;
   font-size: 14px;
   line-height: 18px;
+  padding-bottom: 10px;
+  color: red;
+  display: none;
+}
+
+.page-container .error {
+  width: 100% !important;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 10px;
   padding-bottom: 10px;
   color: red;
   display: none;

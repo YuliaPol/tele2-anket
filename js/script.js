@@ -16,6 +16,27 @@ jQuery(function ($) {
         $('.client-login-time').change(function(e){
             timeChange();
         });
+        $('.consultat-time').inputmask({
+            alias: "datetime",
+            inputFormat: "HH:MM:ss",
+            placeholder: "00:00:00"
+        });
+        $('.client-sum-time').inputmask({
+            alias: "datetime",
+            inputFormat: "HH:MM:ss",
+            placeholder: "00:00:00"
+        });
+        $('.consultat-time').change(function(e){
+            let consultSeconds = timeToSeconds($(this).val());
+            let visitSeconds = timeToSeconds($('.client-sum-time').val());
+            if(consultSeconds > visitSeconds) {
+                $('.consultat-time').parents('.question-block').addClass('has-error');
+                $('.consultat-time').parents('.question-block').find('.error').fadeIn(300);
+            } else {
+                $('.consultat-time').parents('.question-block').removeClass('has-error');
+                $('.consultat-time').parents('.question-block').find('.error').fadeOut(300);
+            }
+        });
         function timeChange (){
             let logoutTime = $('.client-logout-time').val();
             let loginTime = $('.client-login-time').val();
@@ -43,7 +64,7 @@ jQuery(function ($) {
             let seconds = totalSeconds % 60
             return [hours,minutes,seconds]
                 .map(v => v < 10 ? "0" + v : v)
-                .filter((v,i) => v !== "00" || i > 0)
+                // .filter((v,i) => v !== "00" || i > 0)
                 .join(":")
         }
         function timeToSeconds(time){
