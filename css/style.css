@@ -656,6 +656,15 @@ table {
   padding-right: 20px;
 }
 
+.page-container .time-error {
+  width: 100% !important;
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 10px;
+  color: red;
+  display: none;
+}
+
 .page-container .questions-group {
   padding-top: 35px;
   padding-bottom: 15px;
