@@ -16,18 +16,16 @@ jQuery(function ($) {
         $('.client-login-time').change(function(e){
             timeChange();
         });
-        $('.consultat-time').inputmask({
-            alias: "datetime",
-            inputFormat: "HH:MM:ss",
-            placeholder: "00:00:00"
-        });
-        $('.client-sum-time').inputmask({
-            alias: "datetime",
-            inputFormat: "HH:MM:ss",
-            placeholder: "00:00:00"
-        });
+        $('.consultat-time').inputmask("99:99:99");
+        $('.client-sum-time').inputmask("99:99:99");
+        $('.client-sum-time').change(function(e){
+            timeConsultChange();
+        })
         $('.consultat-time').change(function(e){
-            let consultSeconds = timeToSeconds($(this).val());
+            timeConsultChange();
+        });
+        function timeConsultChange(){
+            let consultSeconds = timeToSeconds($('.consultat-time').val());
             let visitSeconds = timeToSeconds($('.client-sum-time').val());
             if(consultSeconds > visitSeconds) {
                 $('.consultat-time').parents('.question-block').addClass('has-error');
@@ -36,7 +34,7 @@ jQuery(function ($) {
                 $('.consultat-time').parents('.question-block').removeClass('has-error');
                 $('.consultat-time').parents('.question-block').find('.error').fadeOut(300);
             }
-        });
+        }
         function timeChange (){
             let logoutTime = $('.client-logout-time').val();
             let loginTime = $('.client-login-time').val();
