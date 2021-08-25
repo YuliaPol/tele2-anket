@@ -278,12 +278,32 @@ jQuery(function ($) {
         $('.select-main').change(function(e){
             let selected = $(this).find('option:selected');
             let type = selected.attr('data-type');
+            $('.for-admin').fadeOut(300);
+            $('.for-induvidual').fadeOut(300);
+            $('.for-info').fadeOut(300);
+            $('.for-refill').fadeOut(300);
+            $('.for-purchase-goods').fadeOut(300);
+            $('.for-purchase-equipment').fadeOut(300);
             switch(type){
                 case "admin":
                     $('.for-admin').fadeIn(300);
                     break;
+                case "induvidual":
+                    $('.for-induvidual').fadeIn(300);
+                    break;
+                case "info":
+                    $('.for-info').fadeIn(300);
+                    break;
+                case "refill":
+                    $('.for-refill').fadeIn(300);
+                    break;
+                case "purchase-goods":
+                    $('.for-purchase-goods').fadeIn(300);
+                    break;  
+                case "purchase-equipment":
+                    $('.for-purchase-equipment').fadeIn(300);
+                    break;  
                 default: 
-                    $('.for-admin').fadeOut(300);
             }
         });
         $('.questions-container').on('change', '.select-show-hidden', function(e){
@@ -405,9 +425,12 @@ jQuery(function ($) {
             if(keycode == '13'){
                 if($(event.target).hasClass('time-input')){
                     $('.clockpicker-popover').find('.clockpicker-button').click();
+                    return false;
                 }
-                return false;
             }
         });
+
+        // preloader
+        $('.load-wrapper').fadeOut();
     });
 });

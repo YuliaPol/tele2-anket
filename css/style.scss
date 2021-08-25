@@ -948,6 +948,68 @@ table {
         }
     }
 }
+.load-wrapper {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background: #ffffff;
+    z-index: 9999;
+    .loader {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100px;
+        width: 100px;
+        margin: -50px 0 0 -50px;
+        border: 2px solid transparent;
+        border-top-color: #000000;
+        border-radius: 50%;
+        animation: spin7 1.5s ease infinite;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            bottom: 7px;
+            left: 7px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            border-top-color: #000000;
+            animation: spin7 3s linear infinite;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            border-top-color: #000000;
+            animation: spin7 1.5s ease infinite;
+        }
+      }
+      @-webkit-keyframes spin7 {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+      }
+      @keyframes spin7 {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+      }
+}
 @media screen and (max-width: 1100px) {
     .page-container .questions-group .questions-group-name {
         font-size: 16px;

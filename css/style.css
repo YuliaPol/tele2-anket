@@ -1241,6 +1241,97 @@ table {
   line-height: 38px;
 }
 
+.load-wrapper {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background: #ffffff;
+  z-index: 9999;
+}
+
+.load-wrapper .loader {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  margin: -50px 0 0 -50px;
+  border: 2px solid transparent;
+  border-top-color: #000000;
+  border-radius: 50%;
+  -webkit-animation: spin7 1.5s ease infinite;
+       -o-animation: spin7 1.5s ease infinite;
+          animation: spin7 1.5s ease infinite;
+}
+
+.load-wrapper .loader:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  bottom: 7px;
+  left: 7px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #000000;
+  -webkit-animation: spin7 3s linear infinite;
+       -o-animation: spin7 3s linear infinite;
+          animation: spin7 3s linear infinite;
+}
+
+.load-wrapper .loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #000000;
+  -webkit-animation: spin7 1.5s ease infinite;
+       -o-animation: spin7 1.5s ease infinite;
+          animation: spin7 1.5s ease infinite;
+}
+
+@-webkit-keyframes spin7 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin7 {
+  from {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+       transform: rotate(359deg);
+  }
+}
+
+@keyframes spin7 {
+  from {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+         -o-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .page-container .questions-group .questions-group-name {
     font-size: 16px;
