@@ -1,16 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-
-</body>
-
-</html>
+<div class="questions-group">
+    <div class="questions-group-name">
+        <span>
+            21. Статистический блок "Бонус за переход по MNP в салонах Tele2"
+        </span>
+    </div>
+    <div class="question-block">
+        <div class="question">
+            21.1 Предложил ли сотрудник воспользоваться акцией «Бонус за MNP» 
+        </div>
+        <div class="question-description">
+            Вариант ответа N/A – для всех остальных визитов (сюда включаются случае, если пополнение совершается через
+            терминал на любого оператора, или через кассу, но на номер Tele2)
+        </div>
+        <div class="answer select-answer">
+            <select class="customselect select-show-hidden" name="q-92" data-reqired="reqired">
+                <option value="" disabled selected>Выбрать ответ</option>
+                <option data-hidden=".hidden-92-yes"  value="Да">Да</option>
+                <option data-hidden=".hidden-92-yes" value="Клиент сам спросил про акцию">
+                    Клиент сам спросил про акцию
+                </option>
+                <option value="Нет, но клиент пополнял счёт другого оператора через кассу">
+                    Нет, но клиент пополнял счёт другого оператора через кассу
+                </option>
+                <option value="N/A – для всех остальных визитов">
+                    N/A – для всех остальных визитов
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="hidden-question hidden-92-yes">
+        <div class="question-block">
+            <div class="question">
+                22.2 Какие действия клиента были на предложение акции 
+            </div>
+            <div class="question-description">
+                Укажите в поле комментарий подробно согласился клиент на предложение или нет. В случае, если не
+                согласился укажите какие были возражения, что говорил клиент и т.д.
+            </div>
+            <div class="answer">
+                <textarea name="q-93" rows="1" data-reqired="reqired"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

@@ -178,6 +178,13 @@ table {
         .hidden-question {
             display: none;
         }
+        .group-rating {
+            text-align: right;
+            font-weight: bold;
+            padding-bottom: 5px;
+            max-width: 90%;
+            padding-right: 20px;
+        }
         .questions-group-description {
             background: $lightGrey;
             padding: 10px 20px;
@@ -1011,6 +1018,9 @@ table {
       }
 }
 @media screen and (max-width: 1100px) {
+    .page-container .questions-container .group-rating {
+        max-width: 100%;
+    }
     .page-container .questions-group .questions-group-name {
         font-size: 16px;
         padding-bottom: 15px;

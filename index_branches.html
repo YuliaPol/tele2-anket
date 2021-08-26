@@ -957,7 +957,7 @@
                     <div class="hidden-question hidden-37-na">
                         <div class="question-block">
                             <div class="question">
-                                По какой причине выставлена оценка N|A 
+                                По какой причине выставлена оценка N/A 
                             </div>
                             <div class="answer select-answer">
                                 <select class="customselect" name="q-39" data-reqired="reqired">
@@ -2482,6 +2482,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Dynamic parts -->
                 <div class="questions-group">
                     <div class="questions-group-name">
                         <span>
@@ -2536,6 +2538,147 @@
                 <div class="questions-group">
                     <div class="questions-group-name">
                         <span>
+                            20. Статистический блок "Подключение"
+                        </span>
+                    </div>
+                    <div class="question-block">
+                        <div class="question">
+                            20.1 У клиента был вопрос по подключению новой сим-карты/консультации по ТП 
+                        </div>
+                        <div class="answer answer-radio flex-25 show-hidden">
+                            <div class="radio-item">
+                                <input type="radio" name="q-89" id="q-89-1" value="Да"
+                                    data-reqired="reqired">
+                                <label for="q-89-1">Да</label>
+                            </div>
+                            <div class="radio-item">
+                                <input data-hidden=".hidden-89-no"  type="radio" name="q-89" id="q-89-2" value="Нет" data-reqired="reqired">
+                                <label for="q-89-2">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden-question hidden-89-no">
+                        <div class="question-block">
+                            <div class="question">
+                                20.2 По какой причине клиент не подключился 
+                            </div>
+                            <div class="answer select-answer">
+                                <select class="customselect select-show-hidden" name="q-90" data-reqired="reqired">
+                                    <option value="" disabled selected>Выбрать ответ</option>
+                                    <option value="Не было с собой денег">
+                                        Не было с собой денег
+                                    </option>
+                                    <option value="Не было паспорта">
+                                        Не было паспорта
+                                    </option>
+                                    <option value="Не хотел долго ждать">
+                                        Не хотел долго ждать
+                                    </option>
+                                    <option value="Решил подумать">
+                                        Решил подумать
+                                    </option>
+                                    <option data-hidden=".hidden-90-other" value="Другое">Другое</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hidden-question hidden-90-other">
+                            <div class="question-block">
+                                <div class="question">
+                                    20.3 Почему клиент отказался и какая была реакция на предложение сотрудника 
+                                </div>
+                                <div class="answer">
+                                    <textarea name="q-90-other" rows="1" data-reqired="reqired"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="questions-group">
+                    <div class="questions-group-name">
+                        <span>
+                            21. Статистический блок "Коллаборация с Cofix"
+                        </span>
+                    </div>
+                    <div class="question-block">
+                        <div class="question">
+                            21.1 Кто был инициатором диалога  
+                        </div>
+                        <div class="answer select-answer">
+                            <select class="customselect" name="q-91" data-reqired="reqired">
+                                <option value="" disabled selected>Выбрать ответ</option>
+                                <option value="Клиент самостоятельно обратился в салон к продавцу">
+                                    Клиент самостоятельно обратился в салон к продавцу
+                                </option>
+                                <option value="Сотрудник обратился к клиенту Cofix">
+                                    Сотрудник обратился к клиенту Cofix
+                                </option>
+                                <option value="Сотрудник обратился к клиенту салона">
+                                    Сотрудник обратился к клиенту салона
+                                </option>
+                                <option value="N/A">N/A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="questions-group">
+                    <div class="questions-group-name">
+                        <span>
+                            21. Статистический блок "Бонус за переход по MNP в салонах Tele2"
+                        </span>
+                    </div>
+                    <div class="question-block">
+                        <div class="question">
+                            21.1 Предложил ли сотрудник воспользоваться акцией «Бонус за MNP» 
+                        </div>
+                        <div class="question-description">
+                            Вариант ответа N/A – для всех остальных визитов (сюда включаются случае, если пополнение совершается через
+                            терминал на любого оператора, или через кассу, но на номер Tele2)
+                        </div>
+                        <div class="answer select-answer">
+                            <select class="customselect select-show-hidden" name="q-92" data-reqired="reqired">
+                                <option value="" disabled selected>Выбрать ответ</option>
+                                <option data-hidden=".hidden-92-yes"  value="Да">Да</option>
+                                <option data-hidden=".hidden-92-yes" value="Клиент сам спросил про акцию">
+                                    Клиент сам спросил про акцию
+                                </option>
+                                <option value="Нет, но клиент пополнял счёт другого оператора через кассу">
+                                    Нет, но клиент пополнял счёт другого оператора через кассу
+                                </option>
+                                <option value="N/A – для всех остальных визитов">
+                                    N/A – для всех остальных визитов
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="hidden-question hidden-92-yes">
+                        <div class="question-block">
+                            <div class="question">
+                                22.2 Какие действия клиента были на предложение акции 
+                            </div>
+                            <div class="question-description">
+                                Укажите в поле комментарий подробно согласился клиент на предложение или нет.<br>
+                                В случае, если не согласился укажите какие были возражения, что говорил клиент и т.д.
+                            </div>
+                            <div class="answer">
+                                <textarea name="q-93" rows="1" data-reqired="reqired"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <div class="questions-group">
+                    <div class="questions-group-name">
+                        <span>
                             Рекомендации сотруднику
                         </span>
                     </div>
@@ -2544,10 +2687,11 @@
                             Рекомендации сотруднику
                         </div>
                         <div class="answer">
-                            <textarea name="q-89" rows="1" data-reqired="reqired"></textarea>
+                            <textarea name="q-94" rows="1" data-reqired="reqired"></textarea>
                         </div>
                     </div>
                 </div>
+
                 <div class="questions-group">
                     <div class="questions-group-name">
                         <span>
@@ -2559,7 +2703,7 @@
                             Статус
                         </div>
                         <div class="answer select-answer">
-                            <select class="customselect" name="q-90" data-reqired="reqired">
+                            <select class="customselect" name="q-95" data-reqired="reqired">
                                 <option value="" disabled selected>Выбрать ответ</option>
                                 <option value="Анкета создана">
                                     Анкета создана
@@ -2608,12 +2752,12 @@
                         </div>
                         <div class="answer answer-radio flex-25" data-reqired="reqired">
                             <div class="radio-item">
-                                <input type="radio" name="q-91" id="q-91-1" value="Да">
-                                <label for="q-91-1">Да</label>
+                                <input type="radio" name="q-96" id="q-96-1" value="Да">
+                                <label for="q-96-1">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input type="radio" name="q-91" id="q-91-2" value="Нет">
-                                <label for="q-91-2">Нет</label>
+                                <input type="radio" name="q-96" id="q-96-2" value="Нет">
+                                <label for="q-96-2">Нет</label>
                             </div>
                         </div>
                     </div>
@@ -2624,7 +2768,7 @@
                             Статус претензии
                         </div>
                         <div class="answer select-answer">
-                            <select class="customselect" name="q-92" data-reqired="reqired">
+                            <select class="customselect" name="q-97" data-reqired="reqired">
                                 <option value="" disabled selected>Выбрать ответ</option>
                                 <option value="Нет претензии">Нет претензии</option>
                                 <option value="Отклонена">Отклонена</option>
@@ -2638,7 +2782,7 @@
                             Логин валидатора
                         </div>
                         <div class="answer">
-                            <textarea name="q-93" rows="1" data-reqired="reqired"></textarea>
+                            <textarea name="q-98" rows="1" data-reqired="reqired"></textarea>
                         </div>
                     </div>
                     <div class="question-block">
@@ -2647,23 +2791,23 @@
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input data-hidden=".hidden-94-yes" type="radio" name="q-94" id="q-94-1" value="Да"
+                                <input data-hidden=".hidden-99-yes" type="radio" name="q-99" id="q-99-1" value="Да"
                                     data-reqired="reqired">
-                                <label for="q-94-1">Да</label>
+                                <label for="q-99-1">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input type="radio" name="q-94" id="q-94-2" value="Нет" data-reqired="reqired">
-                                <label for="q-94-2">Нет</label>
+                                <input type="radio" name="q-99" id="q-99-2" value="Нет" data-reqired="reqired">
+                                <label for="q-99-2">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-94-yes">
+                    <div class="hidden-question hidden-99-yes">
                         <div class="question-block">
                             <div class="question">
                                 Суть ошибки
                             </div>
                             <div class="answer select-answer">
-                                <select class="customselect" name="q-95" data-reqired="reqired">
+                                <select class="customselect" name="q-100" data-reqired="reqired">
                                     <option value="" disabled selected>Выбрать ответ</option>
                                     <option value="несоответствие комментариев ответам в анкете">
                                         несоответствие комментариев ответам в анкете
@@ -2681,7 +2825,7 @@
                             Номера вопросов, которые оспариваются в претензии (сопротивление) 
                         </div>
                         <div class="answer">
-                            <textarea name="q-96" rows="1" data-reqired="reqired"></textarea>
+                            <textarea name="q-101" rows="1" data-reqired="reqired"></textarea>
                         </div>
                     </div>
 
@@ -2691,23 +2835,23 @@
                         </div>
                         <div class="answer answer-radio flex-25 show-hidden">
                             <div class="radio-item">
-                                <input data-hidden=".hidden-97-yes" type="radio" name="q-97" id="q-97-1" value="Да"
+                                <input data-hidden=".hidden-102-yes" type="radio" name="q-102" id="q-102-1" value="Да"
                                     data-reqired="reqired">
-                                <label for="q-97-1">Да</label>
+                                <label for="q-102-1">Да</label>
                             </div>
                             <div class="radio-item">
-                                <input type="radio" name="q-97" id="q-97-2" value="Нет" data-reqired="reqired">
-                                <label for="q-97-2">Нет</label>
+                                <input type="radio" name="q-102" id="q-102-2" value="Нет" data-reqired="reqired">
+                                <label for="q-102-2">Нет</label>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-question hidden-97-yes">
+                    <div class="hidden-question hidden-102-yes">
                         <div class="question-block">
                             <div class="question">
                                 Номера вопросов, которые оспариваются в претензии (уточнения от клиента) 
                             </div>
                             <div class="answer">
-                                <textarea name="q-98" rows="1" data-reqired="reqired"></textarea>
+                                <textarea name="q-103" rows="1" data-reqired="reqired"></textarea>
                             </div>
                         </div>
                     </div>
@@ -2716,7 +2860,7 @@
                             Номера вопросов, которые одобрены по претензии 
                         </div>
                         <div class="answer">
-                            <textarea name="q-99" rows="1" data-reqired="reqired"></textarea>
+                            <textarea name="q-104" rows="1" data-reqired="reqired"></textarea>
                         </div>
                     </div>
                     <div class="question-block">
@@ -2724,7 +2868,7 @@
                             Номера вопросов, которые отклонены по претензии 
                         </div>
                         <div class="answer">
-                            <textarea name="q-100" rows="1" data-reqired="reqired"></textarea>
+                            <textarea name="q-105" rows="1" data-reqired="reqired"></textarea>
                         </div>
                     </div>
                     <div class="grey-block anket-info-block">
