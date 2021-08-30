@@ -1340,6 +1340,10 @@ table {
   }
 }
 
+.hidden-group {
+  display: none;
+}
+
 @media screen and (max-width: 1100px) {
   .page-container .questions-container .group-rating {
     max-width: 100%;

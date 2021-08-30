@@ -49,10 +49,14 @@ jQuery(function ($) {
                     $('.client-logout-time').parents('.input-fieldset').removeClass('has-error');
                     $('.client-login-time').parents('.input-fieldset').removeClass('has-error');
                     $('.client-login-time').parents('.time-group').find('.time-error').fadeOut(300);
+                    console.log('NOT error');
+                    return true;
                 } else {
                     $('.client-logout-time').parents('.input-fieldset').addClass('has-error');
                     $('.client-login-time').parents('.input-fieldset').addClass('has-error');
                     $('.client-login-time').parents('.time-group').find('.time-error').fadeIn(300);
+                    console.log('error');
+                    return false;
                 }
             }
         }
@@ -278,30 +282,52 @@ jQuery(function ($) {
         $('.select-main').change(function(e){
             let selected = $(this).find('option:selected');
             let type = selected.attr('data-type');
-            $('.for-admin').fadeOut(300);
-            $('.for-induvidual').fadeOut(300);
-            $('.for-info').fadeOut(300);
-            $('.for-refill').fadeOut(300);
-            $('.for-purchase-goods').fadeOut(300);
-            $('.for-purchase-equipment').fadeOut(300);
+            $('.for-admin').fadeOut(0);
+            $('.for-induvidual').fadeOut(0);
+            $('.for-info').fadeOut(0);
+            $('.for-refill').fadeOut(0);
+            $('.for-purchase-goods').fadeOut(0);
+            $('.for-purchase-equipment').fadeOut(0);
+
+            //groups
+
+            $('.group-ID').fadeOut(300);
+            $('.group-el-signature').fadeOut(300);
+            $('.group-connections').fadeOut(300);
+            $('.group-cofix').fadeOut(300);
+            $('.group-bonusMNP').fadeOut(300);
             switch(type){
                 case "admin":
                     $('.for-admin').fadeIn(300);
+                    $('.group-ID').fadeIn(300);
+                    $('.group-el-signature').fadeIn(300);
                     break;
                 case "induvidual":
                     $('.for-induvidual').fadeIn(300);
+                    $('.group-ID').fadeIn(300);
+                    $('.group-connections').fadeIn(300);
                     break;
                 case "info":
                     $('.for-info').fadeIn(300);
+                    $('.group-ID').fadeIn(300);
+                    $('.group-connections').fadeIn(300);
+                    $('.group-cofix').fadeIn(300);
                     break;
                 case "refill":
                     $('.for-refill').fadeIn(300);
+                    $('.group-ID').fadeIn(300);
+                    $('.group-connections').fadeIn(300);
+                    $('.group-bonusMNP').fadeIn(300);
                     break;
                 case "purchase-goods":
                     $('.for-purchase-goods').fadeIn(300);
+                    $('.group-ID').fadeIn(300);
+                    $('.group-connections').fadeIn(300);
                     break;  
                 case "purchase-equipment":
                     $('.for-purchase-equipment').fadeIn(300);
+                    $('.group-ID').fadeIn(300);
+                    $('.group-connections').fadeIn(300);
                     break;  
                 default: 
             }
@@ -315,8 +341,15 @@ jQuery(function ($) {
                         $($(options[i]).attr('data-hidden')).fadeIn(300);   
                     }
                     else {
-                        if($(selected).attr('data-hidden') !== $(options[i]).attr('data-hidden')){
-                            $($(options[i]).attr('data-hidden')).fadeOut(300);
+                        if($(this).attr('multiple')){
+                            if($(selected[0]).attr('data-hidden') !== $(options[i]).attr('data-hidden')){
+                                $($(options[i]).attr('data-hidden')).fadeOut(300);
+                            }
+                        }
+                        else {
+                            if($(selected).attr('data-hidden') !== $(options[i]).attr('data-hidden')){
+                                $($(options[i]).attr('data-hidden')).fadeOut(300);
+                            }
                         }
                     }
                 }
@@ -331,7 +364,9 @@ jQuery(function ($) {
                 e.preventDefault();
                 var el = document.querySelectorAll('.form-valid [data-reqired]');
                 var erroreArrayElemnts = [];
-
+                if(!timeChange()){
+                    erroreArrayElemnts.push($('.client-login-time'));
+                }
                 for (var i = 0; i < el.length; i++) {
                     if (el[i].value === '' || el[i].value === ' ' || el[i].value === '-') {
                         if($(el[i]).is(':visible')){
