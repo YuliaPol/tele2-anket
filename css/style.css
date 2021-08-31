@@ -730,6 +730,7 @@ table {
   font-weight: 600;
   padding-bottom: 25px;
   position: relative;
+  font-weight: bold;
 }
 
 .page-container .questions-group .questions-group-name::before {
@@ -1353,7 +1354,7 @@ table {
     max-width: 100%;
   }
   .page-container .questions-group .questions-group-name {
-    font-size: 16px;
+    font-size: 18px;
     padding-bottom: 15px;
   }
   .page-container .questions-group .questions-group-name::before {
@@ -1394,6 +1395,10 @@ table {
 }
 
 @media screen and (max-width: 768px) {
+  .page-container .questions-group .questions-group-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
   .page-container .info-block .info-row {
     width: 100%;
     padding-right: 0px;
