@@ -296,6 +296,9 @@ jQuery(function ($) {
             $('.group-connections').fadeOut(300);
             $('.group-cofix').fadeOut(300);
             $('.group-bonusMNP').fadeOut(300);
+
+            //all anket
+            $('.hidden-anket').fadeIn(300);
             switch(type){
                 case "admin":
                     $('.for-admin').fadeIn(300);
