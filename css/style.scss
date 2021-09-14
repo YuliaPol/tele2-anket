@@ -184,6 +184,11 @@ table {
             padding-bottom: 5px;
             max-width: 90%;
             padding-right: 20px;
+            .group-rate,
+            .group-max,
+            .sep {
+                display: inline-block;
+            }
         }
         .questions-group-description {
             background: $lightGrey;
@@ -881,12 +886,18 @@ table {
 
     }
 }
+.hidden {
+    display: none !important;
+}
 .anket-info-block {
     padding: 10px 20px;
     font-size: 16px;
     line-height: 20px;
     .anket-info {
         padding-bottom: 5px;
+        &.anket-info-italic {
+            font-style: italic;
+        }
     }
     .label {
         display: inline;
