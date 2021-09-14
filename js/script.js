@@ -120,6 +120,12 @@ jQuery(function ($) {
                             }
                         }
                     }
+                    let checked = $(questions[i]).find('input:checked');
+                    if(checked.length > 0  && checked.attr('data-rateMaxNull')){
+                        group.find('.group-max').html(0);
+                    } else {
+                        group.find('.group-max').html(inputPoints);
+                    }
                     points += inputPoints;
                 }
             }
