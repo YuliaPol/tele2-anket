@@ -106,10 +106,14 @@ jQuery(function ($) {
             let points = 0;
             let questions = group.find('.rating-input');
             for (let i = 0; i < questions.length; i++) {
-                if($(questions[i]).is(':visible')){
+                if($(questions[i]).is(':visible') && !$(questions[i]).hasClass('rating-noInMax')){
                     let inputs = $(questions[i]).find('input');
                     let inputPoints = 0;
                     for (let index = 0; index < inputs.length; index++) {
+                        if($(inputs[index]).is(':checked') && $(inputs[index]).attr('data-rateMaxNull')){
+                            inputPoints = 0;
+                            break;
+                        }
                         if($(inputs[index]).attr('data-points')){
                             if(inputPoints < parseInt($(inputs[index]).attr('data-points'))){
                                 inputPoints = parseInt($(inputs[index]).attr('data-points'));
