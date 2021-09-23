@@ -6,16 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Администрирование</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
     <link rel="stylesheet" href="./css/datepicker.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="./css/jquery-clockpicker.min.css">
-    <link rel="stylesheet" href="./css/style.css?76546785">
+    <link rel="stylesheet" href="./css/style.css?435254746346">
 
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="./js/jquery.inputmask.min.js"></script>
+    <script src="./js/moment.min.js"></script>
     <script src="./js/datepicker.min.js"></script>
     <script src="./js/datepicker.ru-RU.js"></script>
     <script src="./js/jquery-clockpicker.min.js"></script>
+    <script src="./js/bootstrap-datetimepicker.min.js"></script>
 </head>
 
 <body>
@@ -203,8 +207,26 @@
                     <div class="question">
                         Примерный возраст клиента
                     </div>
-                    <div class="answer">
-                        <textarea name="q-13" rows="1" data-reqired="reqired"></textarea>
+                    <div class="answer select-answer">
+                        <select class="customselect" name="q-13" data-reqired="reqired">
+                            <option value="" disabled selected>Выбрать ответ</option>
+                            <option value="14-18">14-18</option>
+                            <option value="18-20">18-20</option>
+                            <option value="20-23">20-23</option>
+                            <option value="23-25">23-25</option>
+                            <option value="25-28">25-28</option>
+                            <option value="28-30">28-30</option>
+                            <option value="30-35">30-35</option>
+                            <option value="35-40">35-40</option>
+                            <option value="40-45">40-45</option>
+                            <option value="45-50">45-50</option>
+                            <option value="50-55">50-55</option>
+                            <option value="55-60">55-60</option>
+                            <option value="60-65">60-65</option>
+                            <option value="65-70">65-70</option>
+                            <option value="70 и больше">70 и больше</option>
+                            <option value="Возраст не определен.">Возраст не определен.</option>
+                        </select>
                     </div>
                 </div>
                 <div class="question-block">
@@ -668,25 +690,27 @@
                                 <div class="question">
                                     1.5. По какой причине акция не засчитана 
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-34" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник не предлагает клиенту воспользоваться акцией">
-                                            Сотрудник не предлагает клиенту воспользоваться акцией
-                                        </option>
-                                        <option value="Сотрудник неверно озвучил параметры акции">
-                                            Сотрудник неверно озвучил параметры акции
-                                        </option>
-                                        <option value="Сотрудник озвучил не все основные параметры акции">
-                                            Сотрудник озвучил не все основные параметры акции
-                                        </option>
-                                        <option value="Сотрудник ничего не говорил об акции">
-                                            Сотрудник ничего не говорил об акции
-                                        </option>
-                                        <option value="Акция неактуальна">
-                                            Акция неактуальна
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-34" id="q-34-1" value="Сотрудник не предлагает клиенту воспользоваться акцией" data-reqired="reqired">
+                                        <label for="q-34-1">Сотрудник не предлагает клиенту воспользоваться акцией</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-34" id="q-34-2" value="Сотрудник неверно озвучил параметры акции" data-reqired="reqired">
+                                        <label for="q-34-2">Сотрудник неверно озвучил параметры акции</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-34" id="q-34-3" value="Сотрудник озвучил не все основные параметры акции" data-reqired="reqired">
+                                        <label for="q-34-3">Сотрудник озвучил не все основные параметры акции</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-34" id="q-34-4" value="Сотрудник ничего не говорил об акции" data-reqired="reqired">
+                                        <label for="q-34-4">Сотрудник ничего не говорил об акции</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-34" id="q-34-5" value="Акция неактуальна" data-reqired="reqired">
+                                        <label for="q-34-5">Акция неактуальна</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -931,43 +955,43 @@
                                 <div class="question">
                                     Какие именно условия не соблюдал сотрудник 
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-42" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option
-                                            value="Сотрудник нарушил условия идентификации абонента, указанные в процедуре">
-                                            Сотрудник нарушил условия идентификации абонента, указанные в процедуре
-                                        </option>
-                                        <option
-                                            value="Сотрудник предоставил неверную/неполную информацию об услуге/продукте/процедуре">
-                                            Сотрудник предоставил неверную/неполную информацию об услуге/продукте/процедуре
-                                        </option>
-                                        <option value="Сотрудник предоставил неверную/неполную информацию о тарифном плане">
-                                            Сотрудник предоставил неверную/неполную информацию о тарифном плане
-                                        </option>
-                                        <option value="Сотрудник принял документы не полностью/с ошибкой">
-                                            Сотрудник принял документы не полностью/с ошибкой
-                                        </option>
-                                        <option
-                                            value="Сотрудник не выдал клиенту подтверждающие документы (копию заявления/чек">
-                                            Сотрудник не выдал клиенту подтверждающие документы (копию заявления/чек
-                                        </option>
-                                        <option
-                                            value="Сотрудник озвучил стоимость услуг/товаров, которая не соответствует действительности">
-                                            Сотрудник озвучил стоимость услуг/товаров, которая не соответствует
-                                            действительности
-                                        </option>
-                                        <option value="Сотрудник не придерживался прочих инструкций">
-                                            Сотрудник не придерживался прочих инструкций
-                                        </option>
-                                        <option
-                                            value="Сотрудник не сделал презентацию ТП/ озвучил не полностью/неверно озвучил">
-                                            Сотрудник не сделал презентацию ТП/ озвучил не полностью/неверно озвучил
-                                        </option>
-                                        <option value="Сотрудник не озвучил информации об активации сим-карты">
-                                            Сотрудник не озвучил информации об активации сим-карты
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-1" value="Сотрудник нарушил условия идентификации абонента, указанные в процедуре" data-reqired="reqired">
+                                        <label for="q-42-1">Сотрудник нарушил условия идентификации абонента, указанные в процедуре</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-2" value="Сотрудник предоставил неверную/неполную информацию об услуге/продукте/процедуре" data-reqired="reqired">
+                                        <label for="q-42-2">Сотрудник предоставил неверную/неполную информацию об услуге/продукте/процедуре</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-3" value="Сотрудник предоставил неверную/неполную информацию о тарифном плане" data-reqired="reqired">
+                                        <label for="q-42-3">Сотрудник предоставил неверную/неполную информацию о тарифном плане</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-4" value="Сотрудник принял документы не полностью/с ошибкой" data-reqired="reqired">
+                                        <label for="q-42-4">Сотрудник принял документы не полностью/с ошибкой</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-5" value="Сотрудник не выдал клиенту подтверждающие документы (копию заявления/чек" data-reqired="reqired">
+                                        <label for="q-42-5">Сотрудник не выдал клиенту подтверждающие документы (копию заявления/чек</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-6" value="Сотрудник озвучил стоимость услуг/товаров, которая не соответствует действительности" data-reqired="reqired">
+                                        <label for="q-42-6">Сотрудник озвучил стоимость услуг/товаров, которая не соответствует действительности</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-7" value="Сотрудник не придерживался прочих инструкций" data-reqired="reqired">
+                                        <label for="q-42-7">Сотрудник не придерживался прочих инструкций</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-8" value="Сотрудник не сделал презентацию ТП/ озвучил не полностью/неверно озвучил" data-reqired="reqired">
+                                        <label for="q-42-8">Сотрудник не сделал презентацию ТП/ озвучил не полностью/неверно озвучил</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-42" id="q-42-9" value="Сотрудник не озвучил информации об активации сим-карты" data-reqired="reqired">
+                                        <label for="q-42-9">Сотрудник не озвучил информации об активации сим-карты</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="question-block">
@@ -1034,16 +1058,15 @@
                                 <div class="question">
                                     По какой причине выставлена оценка Нет
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-46" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник не выявил наличие номеров другого оператора">
-                                            Сотрудник не выявил наличие номеров другого оператора
-                                        </option>
-                                        <option value="Сотрудник не предложил перенести номер здесь и сейчас">
-                                            Сотрудник не предложил перенести номер здесь и сейчас
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-46" id="q-46-1" value="Сотрудник не выявил наличие номеров другого оператора" data-reqired="reqired">
+                                        <label for="q-46-1">Сотрудник не выявил наличие номеров другого оператора</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-46" id="q-46-2" value="Сотрудник не предложил перенести номер здесь и сейчас" data-reqired="reqired">
+                                        <label for="q-46-2">Сотрудник не предложил перенести номер здесь и сейчас</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1052,32 +1075,37 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A 
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect select-show-hidden" name="q-47" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Клиент сообщил, что является приезжим">
-                                            Клиент сообщил, что является приезжим
-                                        </option>
-                                        <option value="Клиент сообщил, что ему нужен другой номер">
-                                            Клиент сообщил, что ему нужен другой номер
-                                        </option>
-                                        <option value="Клиент сообщил, что приобретает SIM для другого человека">
-                                            Клиент сообщил, что приобретает SIM для другого человека
-                                        </option>
-                                        <option value="Клиент сообщил, что ему нужен красивый номер">
-                                            Клиент сообщил, что ему нужен красивый номер
-                                        </option>
-                                        <option value="Клиент сам обратился за переносом номера">
-                                            Клиент сам обратился за переносом номера
-                                        </option>
-                                        <option value="У клиента нет номеров другого оператора">
-                                            У клиента нет номеров другого оператора
-                                        </option>
-                                        <option  data-hidden=".hidden-47-other" value="Прочее">
-                                            Прочее
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio show-hidden">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-47" id="q-47-1" value="Клиент сообщил, что является приезжим" data-reqired="reqired">
+                                        <label for="q-47-1">Клиент сообщил, что является приезжим</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-47" id="q-47-2" value="Клиент сообщил, что ему нужен другой номер" data-reqired="reqired">
+                                        <label for="q-47-2">Клиент сообщил, что ему нужен другой номер</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-47" id="q-47-3" value="Клиент сообщил, что приобретает SIM для другого человека" data-reqired="reqired">
+                                        <label for="q-47-3">Клиент сообщил, что приобретает SIM для другого человека</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-47" id="q-47-4" value="Клиент сообщил, что ему нужен красивый номер" data-reqired="reqired">
+                                        <label for="q-47-4">Клиент сообщил, что ему нужен красивый номер</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-47" id="q-47-5" value="Клиент сам обратился за переносом номера" data-reqired="reqired">
+                                        <label for="q-47-5">Клиент сам обратился за переносом номера</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-47" id="q-47-6" value="У клиента нет номеров другого оператора" data-reqired="reqired">
+                                        <label for="q-47-6">У клиента нет номеров другого оператора</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input data-hidden=".hidden-47-other" type="radio" name="q-47" id="q-47-7" value="Прочее" data-reqired="reqired">
+                                        <label for="q-47-7">Прочее</label>
+                                    </div>
                                 </div>
+                                
                             </div>
                             <div class="hidden-question hidden-47-other">
                                 <div class="question-block">
@@ -1128,34 +1156,38 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A 
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect select-show-hidden" name="q-143" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Клиент сообщил, что является приезжим">
-                                            Клиент сообщил, что является приезжим
-                                        </option>
-                                        <option value="Клиент сообщил, что ему нужен другой номер">
-                                            Клиент сообщил, что ему нужен другой номер
-                                        </option>
-                                        <option value="Клиент сообщил, что приобретает SIM для другого человека">
-                                            Клиент сообщил, что приобретает SIM для другого человека
-                                        </option>
-                                        <option value="Клиент сообщил, что ему нужен красивый номер">
-                                            Клиент сообщил, что ему нужен красивый номер
-                                        </option>
-                                        <option value="Клиент сам обратился за переносом номера">
-                                            Клиент сам обратился за переносом номера
-                                        </option>
-                                        <option value="У клиента нет номеров другого оператора">
-                                            У клиента нет номеров другого оператора
-                                        </option>
-                                        <option  data-hidden=".hidden-47-other" value="Прочее">
-                                            Прочее
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio show-hidden">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-143" id="q-143-1" value="Клиент сообщил, что является приезжим" data-reqired="reqired">
+                                        <label for="q-143-1">Клиент сообщил, что является приезжим</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-143" id="q-143-2" value="Клиент сообщил, что ему нужен другой номер" data-reqired="reqired">
+                                        <label for="q-143-2">Клиент сообщил, что ему нужен другой номер</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-143" id="q-143-3" value="Клиент сообщил, что приобретает SIM для другого человека" data-reqired="reqired">
+                                        <label for="q-143-3">Клиент сообщил, что приобретает SIM для другого человека</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-143" id="q-143-4" value="Клиент сообщил, что ему нужен красивый номер" data-reqired="reqired">
+                                        <label for="q-143-4">Клиент сообщил, что ему нужен красивый номер</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-143" id="q-143-5" value="Клиент сам обратился за переносом номера" data-reqired="reqired">
+                                        <label for="q-143-5">Клиент сам обратился за переносом номера</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-143" id="q-143-6" value="У клиента нет номеров другого оператора" data-reqired="reqired">
+                                        <label for="q-143-6">У клиента нет номеров другого оператора</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input data-hidden=".hidden-143-other" type="radio" name="q-143" id="q-143-7" value="Прочее" data-reqired="reqired">
+                                        <label for="q-143-7">Прочее</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hidden-question hidden-47-other">
+                            <div class="hidden-question hidden-143-other">
                                 <div class="question-block">
                                     <div class="question">
                                         Комментарий
@@ -1209,19 +1241,19 @@
                                 <div class="question">
                                     По какой причине не завершен MNP
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-50" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник не выяснил наличие сим-карт другого оператора   ">
-                                            Сотрудник не выяснил наличие сим-карт другого оператора
-                                        </option>
-                                        <option value="Сотрудник не привел аргументы на возражения клиента">
-                                            Сотрудник не привел аргументы на возражения клиента
-                                        </option>
-                                        <option value="Сотрудник не предложил перенести номер здесь и сейчас">
-                                            Сотрудник не предложил перенести номер здесь и сейчас
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-50" id="q-50-1" value="Сотрудник не выяснил наличие сим-карт другого оператора" data-reqired="reqired">
+                                        <label for="q-50-1">Сотрудник не выяснил наличие сим-карт другого оператора</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-50" id="q-50-2" value="Сотрудник не привел аргументы на возражения клиента" data-reqired="reqired">
+                                        <label for="q-50-2">Сотрудник не привел аргументы на возражения клиента</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-50" id="q-50-3" value="Сотрудник не предложил перенести номер здесь и сейчас" data-reqired="reqired">
+                                        <label for="q-50-3">Сотрудник не предложил перенести номер здесь и сейчас</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1230,32 +1262,35 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect select-show-hidden" name="q-51" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник выяснил, что клиент является приезжим">
-                                            Сотрудник выяснил, что клиент является приезжим
-                                        </option>
-                                        <option value="Сотрудник выяснил, что клиенту нужен другой номер">
-                                            Сотрудник выяснил, что клиенту нужен другой номер
-                                        </option>
-                                        <option value="Сотрудник выяснил, что клиент приобретает SIM для другого человека">
-                                            Сотрудник выяснил, что клиент приобретает SIM для другого человека
-                                        </option>
-                                        <option value="Сотрудник выяснил, что клиенту нужен красивый номер">
-                                            Сотрудник выяснил, что клиенту нужен красивый номер
-                                        </option>
-                                        <option
-                                            value="Сотрудник отработал возражение клиента, но клиент все равно отказался">
-                                            Сотрудник отработал возражение клиента, но клиент все равно отказался
-                                        </option>
-                                        <option value="У клиента нет номеров другого оператора">
-                                            У клиента нет номеров другого оператора
-                                        </option>
-                                        <option data-hidden=".hidden-51-other" value="Прочее">
-                                            Прочее
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio show-hidden">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-51" id="q-51-1" value="Сотрудник выяснил, что клиент является приезжим" data-reqired="reqired">
+                                        <label for="q-51-1">Сотрудник выяснил, что клиент является приезжим</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-51" id="q-51-2" value="Сотрудник выяснил, что клиенту нужен другой номер" data-reqired="reqired">
+                                        <label for="q-51-2">Сотрудник выяснил, что клиенту нужен другой номер</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-51" id="q-51-3" value="Сотрудник выяснил, что клиент приобретает SIM для другого человека" data-reqired="reqired">
+                                        <label for="q-51-3">Сотрудник выяснил, что клиент приобретает SIM для другого человека</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-51" id="q-51-4" value="Сотрудник выяснил, что клиенту нужен красивый номер" data-reqired="reqired">
+                                        <label for="q-51-4">Сотрудник выяснил, что клиенту нужен красивый номер</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-51" id="q-51-5" value="Сотрудник отработал возражение клиента, но клиент все равно отказался" data-reqired="reqired">
+                                        <label for="q-51-5">Сотрудник отработал возражение клиента, но клиент все равно отказался</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-51" id="q-51-6" value="У клиента нет номеров другого оператора" data-reqired="reqired">
+                                        <label for="q-51-6">У клиента нет номеров другого оператора</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input data-hidden=".hidden-51-other" type="radio" name="q-51" id="q-51-7" value="Прочее" data-reqired="reqired">
+                                        <label for="q-51-7">Прочее</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="hidden-question hidden-51-other">
@@ -1306,32 +1341,35 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect select-show-hidden" name="q-146" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник выяснил, что клиент является приезжим">
-                                            Сотрудник выяснил, что клиент является приезжим
-                                        </option>
-                                        <option value="Сотрудник выяснил, что клиенту нужен другой номер">
-                                            Сотрудник выяснил, что клиенту нужен другой номер
-                                        </option>
-                                        <option value="Сотрудник выяснил, что клиент приобретает SIM для другого человека">
-                                            Сотрудник выяснил, что клиент приобретает SIM для другого человека
-                                        </option>
-                                        <option value="Сотрудник выяснил, что клиенту нужен красивый номер">
-                                            Сотрудник выяснил, что клиенту нужен красивый номер
-                                        </option>
-                                        <option
-                                            value="Сотрудник отработал возражение клиента, но клиент все равно отказался">
-                                            Сотрудник отработал возражение клиента, но клиент все равно отказался
-                                        </option>
-                                        <option value="У клиента нет номеров другого оператора">
-                                            У клиента нет номеров другого оператора
-                                        </option>
-                                        <option data-hidden=".hidden-146-other" value="Прочее">
-                                            Прочее
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio show-hidden">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-146" id="q-146-1" value="Сотрудник выяснил, что клиент является приезжим" data-reqired="reqired">
+                                        <label for="q-146-1">Сотрудник выяснил, что клиент является приезжим</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-146" id="q-146-2" value="Сотрудник выяснил, что клиенту нужен другой номер" data-reqired="reqired">
+                                        <label for="q-146-2">Сотрудник выяснил, что клиенту нужен другой номер</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-146" id="q-146-3" value="Сотрудник выяснил, что клиент приобретает SIM для другого человека" data-reqired="reqired">
+                                        <label for="q-146-3">Сотрудник выяснил, что клиент приобретает SIM для другого человека</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-146" id="q-146-4" value="Сотрудник выяснил, что клиенту нужен красивый номер" data-reqired="reqired">
+                                        <label for="q-146-4">Сотрудник выяснил, что клиенту нужен красивый номер</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-146" id="q-146-5" value="Сотрудник отработал возражение клиента, но клиент все равно отказался" data-reqired="reqired">
+                                        <label for="q-146-5">Сотрудник отработал возражение клиента, но клиент все равно отказался</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-146" id="q-146-6" value="У клиента нет номеров другого оператора" data-reqired="reqired">
+                                        <label for="q-146-6">У клиента нет номеров другого оператора</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input data-hidden=".hidden-146-other" type="radio" name="q-146" id="q-146-7" value="Прочее" data-reqired="reqired">
+                                        <label for="q-146-7">Прочее</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="hidden-question hidden-146-other">
@@ -1381,32 +1419,31 @@
                                 <div class="question">
                                     В чем именно выражалось не качественное предложение 
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-54" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option
-                                            value="Сотрудник не озвучил, где скачать приложение (при наличие тех.проблем)">
-                                            Сотрудник не озвучил, где скачать приложение (при наличие тех.проблем)
-                                        </option>
-                                        <option value="Сотрудник не показал иконку на экране (при наличие тех.проблем)">
-                                            Сотрудник не показал иконку на экране (при наличие тех.проблем)
-                                        </option>
-                                        <option value="Сотрудник ничего не говорил о приложении 'Мой Tele2'">
-                                            Сотрудник ничего не говорил о приложении 'Мой Tele2'
-                                        </option>
-                                        <option
-                                            value="Сотрудник не демонстрирует функциональные возможности приложения 'Мой Tele2' на своём устройстве или устройстве клиента">
-                                            Сотрудник не демонстрирует функциональные возможности приложения 'Мой Tele2' на
-                                            своём устройстве или устройстве клиента
-                                        </option>
-                                        <option
-                                            value="Сотрудник не предлагает установить приложение 'Мой Tele2' на устройство клиента">
-                                            Сотрудник не предлагает установить приложение 'Мой Tele2' на устройство клиента
-                                        </option>
-                                        <option value="Сотрудник не озвучил преимущества ЛК (при наличие тех.проблем)">
-                                            Сотрудник не озвучил преимущества ЛК (при наличие тех.проблем)
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-54" id="q-54-1" value="Сотрудник не озвучил, где скачать приложение (при наличие тех.проблем)" data-reqired="reqired">
+                                        <label for="q-54-1">Сотрудник не озвучил, где скачать приложение (при наличие тех.проблем)</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-54" id="q-54-2" value="Сотрудник не показал иконку на экране (при наличие тех.проблем)" data-reqired="reqired">
+                                        <label for="q-54-2">Сотрудник не показал иконку на экране (при наличие тех.проблем)</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-54" id="q-54-3" value="Сотрудник ничего не говорил о приложении 'Мой Tele2'" data-reqired="reqired">
+                                        <label for="q-54-3">Сотрудник ничего не говорил о приложении 'Мой Tele2'</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-54" id="q-54-4" value="Сотрудник не демонстрирует функциональные возможности приложения 'Мой Tele2' на своём устройстве или устройстве клиента" data-reqired="reqired">
+                                        <label for="q-54-4">Сотрудник не демонстрирует функциональные возможности приложения 'Мой Tele2' на своём устройстве или устройстве клиента</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-54" id="q-54-5" value="Сотрудник не предлагает установить приложение 'Мой Tele2' на устройство клиента" data-reqired="reqired">
+                                        <label for="q-54-5">Сотрудник не предлагает установить приложение 'Мой Tele2' на устройство клиента</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-54" id="q-54-6" value="Сотрудник не озвучил преимущества ЛК (при наличие тех.проблем)" data-reqired="reqired">
+                                        <label for="q-54-6">Сотрудник не озвучил преимущества ЛК (при наличие тех.проблем)</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1450,22 +1487,23 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-149" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник ничего не говорит о приложении &quot;Мой Tele2&quot;">
-                                                Сотрудник ничего не говорит о приложении "Мой Tele2"
-                                        </option>
-                                        <option value="Сотрудник не демонстрирует программу лояльности &quot;Больше&quot; в приложении &quot;Мой Tele2&quot; на своём устройстве или устройстве клиента.">
-                                                Сотрудник не демонстрирует программу лояльности "Больше" в приложении "Мой Tele2" на своём устройстве или устройстве клиента.
-                                        </option>
-                                        <option value="Сотрудник не демонстрирует функциональные возможности приложения &quot;Мой Tele2&quot; на своём устройстве или устройстве клиента.">
-                                                Сотрудник не демонстрирует функциональные возможности приложения "Мой Tele2" на своём устройстве или устройстве клиента.
-                                        </option>
-                                        <option value="Сотрудник не предлагает установить приложение &quot;Мой Tele2&quot; на устройство клиента">
-                                                Сотрудник не предлагает установить приложение "Мой Tele2" на устройство клиента
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-149" id="q-149-1" value="Сотрудник ничего не говорит о приложении &quot;Мой Tele2&quot;" data-reqired="reqired">
+                                        <label for="q-149-1">Сотрудник ничего не говорит о приложении "Мой Tele2"</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-149" id="q-149-2" value="Сотрудник не демонстрирует программу лояльности &quot;Больше&quot; в приложении &quot;Мой Tele2&quot; на своём устройстве или устройстве клиента." data-reqired="reqired">
+                                        <label for="q-149-2">Сотрудник не демонстрирует программу лояльности "Больше" в приложении "Мой Tele2" на своём устройстве или устройстве клиента.</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-149" id="q-149-3" value="Сотрудник не демонстрирует функциональные возможности приложения &quot;Мой Tele2&quot; на своём устройстве или устройстве клиента." data-reqired="reqired">
+                                        <label for="q-149-3">Сотрудник не демонстрирует функциональные возможности приложения "Мой Tele2" на своём устройстве или устройстве клиента.</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-149" id="q-149-4" value="Сотрудник не предлагает установить приложение &quot;Мой Tele2&quot; на устройство клиента" data-reqired="reqired">
+                                        <label for="q-149-4">Сотрудник не предлагает установить приложение "Мой Tele2" на устройство клиента</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1510,24 +1548,23 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect select-show-hidden" name="q-56" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option
-                                            value="У клиента нет с собой подходящего устройства для установки приложения">
-                                            У клиента нет с собой подходящего устройства для установки приложения
-                                        </option>
-                                        <option value="У клиента уже установлено приложение">
-                                            У клиента уже установлено приложение
-                                        </option>
-                                        <option
-                                            value="Сотрудник отработал возражение клиента, но клиент все равно отказался">
-                                            Сотрудник отработал возражение клиента, но клиент все равно отказался
-                                        </option>
-                                        <option data-hidden=".hidden-56-other" value="Прочее">
-                                            Прочее
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio show-hidden">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-56" id="q-56-1" value="У клиента нет с собой подходящего устройства для установки приложения" data-reqired="reqired">
+                                        <label for="q-56-1">У клиента нет с собой подходящего устройства для установки приложения</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-56" id="q-56-2" value="У клиента уже установлено приложение" data-reqired="reqired">
+                                        <label for="q-56-2">У клиента уже установлено приложение</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-56" id="q-56-3" value="Сотрудник отработал возражение клиента, но клиент все равно отказался" data-reqired="reqired">
+                                        <label for="q-56-3">Сотрудник отработал возражение клиента, но клиент все равно отказался</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input data-hidden=".hidden-56-other" type="radio" name="q-56" id="q-56-4" value="Прочее" data-reqired="reqired">
+                                        <label for="q-56-4">Прочее</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="hidden-question hidden-56-other">
@@ -1546,24 +1583,23 @@
                                 <div class="question">
                                     По какой причине сотрудник не установил приложение
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-58" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник не информирует о приложении Мой Tele2">
-                                            Сотрудник не информирует о приложении Мой Tele2
-                                        </option>
-                                        <option value="Сотрудник не предлагает установить приложение «Мой Tele2»">
-                                            Сотрудник не предлагает установить приложение «Мой Tele2»
-                                        </option>
-                                        <option
-                                            value="Сотрудник не демонстрирует функционал 'Мой Tele2' , не презентует программу лояльности Больше на своём устройстве">
-                                            Сотрудник не демонстрирует функционал 'Мой Tele2' , не презентует программу
-                                            лояльности Больше на своём устройстве
-                                        </option>
-                                        <option value="Сотрудник не отработал возражение клиента">
-                                            Сотрудник не отработал возражение клиента
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-58" id="q-58-1" value="Сотрудник не информирует о приложении Мой Tele2" data-reqired="reqired">
+                                        <label for="q-58-1">Сотрудник не информирует о приложении Мой Tele2</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-58" id="q-58-2" value="Сотрудник не предлагает установить приложение «Мой Tele2»" data-reqired="reqired">
+                                        <label for="q-58-2">Сотрудник не предлагает установить приложение «Мой Tele2»</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-58" id="q-58-3" value="Сотрудник не демонстрирует функционал 'Мой Tele2' , не презентует программу лояльности Больше на своём устройстве" data-reqired="reqired">
+                                        <label for="q-58-3">Сотрудник не демонстрирует функционал 'Мой Tele2' , не презентует программу лояльности Больше на своём устройстве</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-58" id="q-58-4" value="Сотрудник не отработал возражение клиента" data-reqired="reqired">
+                                        <label for="q-58-4">Сотрудник не отработал возражение клиента</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1607,24 +1643,23 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect select-show-hidden" name="q-151" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option
-                                            value="У клиента нет с собой подходящего устройства для установки приложения">
-                                            У клиента нет с собой подходящего устройства для установки приложения
-                                        </option>
-                                        <option value="У клиента уже установлено приложение">
-                                            У клиента уже установлено приложение
-                                        </option>
-                                        <option
-                                            value="Сотрудник отработал возражение клиента, но клиент все равно отказался">
-                                            Сотрудник отработал возражение клиента, но клиент все равно отказался
-                                        </option>
-                                        <option data-hidden=".hidden-151-other" value="Прочее">
-                                            Прочее
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio show-hidden">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-151" id="q-151-1" value="У клиента нет с собой подходящего устройства для установки приложения" data-reqired="reqired">
+                                        <label for="q-151-1">У клиента нет с собой подходящего устройства для установки приложения</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-151" id="q-151-2" value="У клиента уже установлено приложение" data-reqired="reqired">
+                                        <label for="q-151-2">У клиента уже установлено приложение</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-151" id="q-151-3" value="Сотрудник отработал возражение клиента, но клиент все равно отказался" data-reqired="reqired">
+                                        <label for="q-151-3">Сотрудник отработал возражение клиента, но клиент все равно отказался</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input data-hidden=".hidden-151-other" type="radio" name="q-151" id="q-151-4" value="Прочее" data-reqired="reqired">
+                                        <label for="q-151-4">Прочее</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="hidden-question hidden-151-other">
@@ -1813,16 +1848,15 @@
                                 <div class="question">
                                     По какой причине выставлена оценка "Нет"
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-69" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник ничего не говорит о дополнительных продуктах">
-                                            Сотрудник ничего не говорит о дополнительных продуктах
-                                        </option>
-                                        <option value="Сотрудник не предложил покупку здесь и сейчас">
-                                            Сотрудник не предложил покупку здесь и сейчас
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-69" id="q-69-1" value="Сотрудник ничего не говорит о дополнительных продуктах" data-reqired="reqired">
+                                        <label for="q-69-1">Сотрудник ничего не говорит о дополнительных продуктах</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-69" id="q-69-2" value="Сотрудник не предложил покупку здесь и сейчас" data-reqired="reqired">
+                                        <label for="q-69-2">Сотрудник не предложил покупку здесь и сейчас</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1831,16 +1865,15 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-70" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник ничего не говорит о дополнительных продуктах">
-                                            Сотрудник ничего не говорит о дополнительных продуктах
-                                        </option>
-                                        <option value="Сотрудник не предложил покупку здесь и сейчас">
-                                            Сотрудник не предложил покупку здесь и сейчас
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-70" id="q-70-1" value="Сотрудник ничего не говорит о дополнительных продуктах" data-reqired="reqired">
+                                        <label for="q-70-1">Сотрудник ничего не говорит о дополнительных продуктах</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-70" id="q-70-2" value="Сотрудник не предложил покупку здесь и сейчас" data-reqired="reqired">
+                                        <label for="q-70-2">Сотрудник не предложил покупку здесь и сейчас</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2018,16 +2051,15 @@
                                 <div class="question">
                                     По какой причине выставлена оценка "Нет"
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-162" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник ничего не говорит о дополнительных продуктах">
-                                            Сотрудник ничего не говорит о дополнительных продуктах
-                                        </option>
-                                        <option value="Сотрудник не предложил покупку здесь и сейчас">
-                                            Сотрудник не предложил покупку здесь и сейчас
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-162" id="q-162-1" value="Сотрудник ничего не говорит о дополнительных продуктах" data-reqired="reqired">
+                                        <label for="q-162-1">Сотрудник ничего не говорит о дополнительных продуктах</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-162" id="q-162-2" value="Сотрудник не предложил покупку здесь и сейчас" data-reqired="reqired">
+                                        <label for="q-162-2">Сотрудник не предложил покупку здесь и сейчас</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2036,16 +2068,15 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-70" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник ничего не говорит о дополнительных продуктах">
-                                            Сотрудник ничего не говорит о дополнительных продуктах
-                                        </option>
-                                        <option value="Сотрудник не предложил покупку здесь и сейчас">
-                                            Сотрудник не предложил покупку здесь и сейчас
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-174" id="q-174-1" value="Сотрудник ничего не говорит о дополнительных продуктах" data-reqired="reqired">
+                                        <label for="q-174-1">Сотрудник ничего не говорит о дополнительных продуктах</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-174" id="q-174-2" value="Сотрудник не предложил покупку здесь и сейчас" data-reqired="reqired">
+                                        <label for="q-174-2">Сотрудник не предложил покупку здесь и сейчас</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2224,16 +2255,15 @@
                                 <div class="question">
                                     По какой причине выставлена оценка "Нет"
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-81" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник не предлагает дополнительные продукты">
-                                            Сотрудник не предлагает дополнительные продукты
-                                        </option>
-                                        <option value="Сотрудник не привел аргументы на возражение клиента">
-                                            Сотрудник не привел аргументы на возражение клиента
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-81" id="q-81-1" value="Сотрудник не предлагает дополнительные продукты" data-reqired="reqired">
+                                        <label for="q-81-1">Сотрудник не предлагает дополнительные продукты</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-81" id="q-81-2" value="Сотрудник не привел аргументы на возражение клиента" data-reqired="reqired">
+                                        <label for="q-81-2">Сотрудник не привел аргументы на возражение клиента</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2242,20 +2272,19 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-82" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник ничего не говорит о дополнительных продуктах">
-                                            Сотрудник ничего не говорит о дополнительных продуктах
-                                        </option>
-                                        <option value="Сотрудник не привел аргументы на возражение клиента">
-                                            Сотрудник не привел аргументы на возражение клиента
-                                        </option>
-                                        <option
-                                            value="Сотрудник отработал возражение клиента, но клиент все равно отказался">
-                                            Сотрудник отработал возражение клиента, но клиент все равно отказался
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-82" id="q-82-1" value="Сотрудник ничего не говорит о дополнительных продуктах" data-reqired="reqired">
+                                        <label for="q-82-1">Сотрудник ничего не говорит о дополнительных продуктах</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-82" id="q-82-2" value="Сотрудник не привел аргументы на возражение клиента" data-reqired="reqired">
+                                        <label for="q-82-2">Сотрудник не привел аргументы на возражение клиента</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-82" id="q-82-3" value="Сотрудник отработал возражение клиента, но клиент все равно отказался" data-reqired="reqired">
+                                        <label for="q-82-3">Сотрудник отработал возражение клиента, но клиент все равно отказался</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2433,20 +2462,19 @@
                                 <div class="question">
                                     По какой причине выставлена оценка N/A
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-173" data-reqired="reqired">
-                                        <option value="" disabled selected>Выбрать ответ</option>
-                                        <option value="Сотрудник ничего не говорит о дополнительных продуктах">
-                                            Сотрудник ничего не говорит о дополнительных продуктах
-                                        </option>
-                                        <option value="Сотрудник не привел аргументы на возражение клиента">
-                                            Сотрудник не привел аргументы на возражение клиента
-                                        </option>
-                                        <option
-                                            value="Сотрудник отработал возражение клиента, но клиент все равно отказался">
-                                            Сотрудник отработал возражение клиента, но клиент все равно отказался
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-173" id="q-173-1" value="Сотрудник ничего не говорит о дополнительных продуктах" data-reqired="reqired">
+                                        <label for="q-173-1">Сотрудник ничего не говорит о дополнительных продуктах</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-173" id="q-173-2" value="Сотрудник не привел аргументы на возражение клиента" data-reqired="reqired">
+                                        <label for="q-173-2">Сотрудник не привел аргументы на возражение клиента</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" name="q-173" id="q-173-3" value="Сотрудник отработал возражение клиента, но клиент все равно отказался" data-reqired="reqired">
+                                        <label for="q-173-3">Сотрудник отработал возражение клиента, но клиент все равно отказался</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2485,29 +2513,27 @@
                                 <div class="question">
                                     Какие ошибки допустил сотрудник 
                                 </div>
-                                <div class="answer select-answer">
-                                    <select class="customselect" name="q-84" multiple data-reqired="reqired">
-                                        <!-- <option value="" disabled selected>Выбрать ответ</option> -->
-                                        <option
-                                            value="На рабочей стойке находятся документы, не относящиеся к консультации и содержат персональные данные других клиентов или компании">
-                                            На рабочей стойке находятся документы, не относящиеся к консультации и содержат
-                                            персональные данные других клиентов или компании
-                                        </option>
-                                        <option value="Отсутствует форма Tele2">
-                                            Отсутствует форма Tele2
-                                        </option>
-                                        <option
-                                            value="В консультации присутствует грубость/хамство от сотрудника в сторону клиента">
-                                            В консультации присутствует грубость/хамство от сотрудника в сторону клиента
-                                        </option>
-                                        <option value="Во время консультации занимался делами, не относящимися к работе">
-                                            Во время консультации занимался делами, не относящимися к работе
-                                        </option>
-                                        <option
-                                            value="Общался с другим сотрудником на темы, не относящиеся к вопросу клиента">
-                                            Общался с другим сотрудником на темы, не относящиеся к вопросу клиента
-                                        </option>
-                                    </select>
+                                <div class="answer answer-radio">
+                                    <div class="radio-item">
+                                        <input type="checkbox" name="q-84-1" id="q-84-1" value="На рабочей стойке находятся документы, не относящиеся к консультации и содержат персональные данные других клиентов или компании" data-reqired="reqired">
+                                        <label for="q-84-1">На рабочей стойке находятся документы, не относящиеся к консультации и содержат персональные данные других клиентов или компании</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="checkbox" name="q-84-2" id="q-84-2" value="Отсутствует форма Tele2" data-reqired="reqired">
+                                        <label for="q-84-2">Отсутствует форма Tele2</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="checkbox" name="q-84-3" id="q-84-3" value="В консультации присутствует грубость/хамство от сотрудника в сторону клиента" data-reqired="reqired">
+                                        <label for="q-84-3">В консультации присутствует грубость/хамство от сотрудника в сторону клиента</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="checkbox" name="q-84-4" id="q-84-4" value="Во время консультации занимался делами, не относящимися к работе" data-reqired="reqired">
+                                        <label for="q-84-4">Во время консультации занимался делами, не относящимися к работе</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="checkbox" name="q-84-5" id="q-84-5" value="Общался с другим сотрудником на темы, не относящиеся к вопросу клиента" data-reqired="reqired">
+                                        <label for="q-84-5">Общался с другим сотрудником на темы, не относящиеся к вопросу клиента</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -3629,7 +3655,7 @@
     <div class="load-wrapper">
         <div class="loader"></div>
     </div>
-    <script src="./js/script.js?675434687954"></script>
+    <script src="./js/script.js?75645467854"></script>
 </body>
 
 </html>

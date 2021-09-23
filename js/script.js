@@ -202,10 +202,18 @@ jQuery(function ($) {
             autoHide: true,
             endDate: '+1d',
         });
-        //input with clock
-        $('.time-input').clockpicker({
-            donetext: 'Завершить'
-        })
+        // //input with clock
+        // $('.time-input').clockpicker({
+        //     donetext: 'Завершить'
+        // })
+        // pick time
+        $('.time-input').datetimepicker({
+            format: 'HH:mm:ss',
+            icons: {
+                up: 'fa fa-chevron-up',
+                down: 'fa fa-chevron-down'
+            }
+        });
         customSelectActive();
         function customSelectActive(){
             $('.customselect').each(function(){

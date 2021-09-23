@@ -1035,6 +1035,17 @@ table {
 .hidden-anket {
     display: none;
 }
+.bootstrap-datetimepicker-widget {
+    position: absolute;
+    background: #ffffff;
+    z-index: 100;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 6px #ccc;
+    table td {
+        width: 30px;
+        height: 25px;
+    }
+}
 @media screen and (max-width: 1100px) {
     .page-container .questions-container .group-rating {
         max-width: 100%;
